@@ -1,0 +1,2051 @@
+[
+  {
+    "id": "a3e283a0-6735-4e1a-9afa-6ea19a757c04",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "66885636-4313-4eea-be8f-a5a4e4007c22",
+    "projectName": "StillClawing",
+    "description": "<p>## StillClawing \ud83e\udd9e \u2014 Dead Man's Switch for AI Agents</p><p></p><p>Inspired by \"\u6b7b\u4e86\u4e48\" (Are You Dead Yet?), the viral Chinese app that checks if solo-living humans are still alive \u2014 StillClawing brings the same life-saving concept to AI agents.</p><p></p><p>### The Problem</p><p></p><p>OpenClaw agents crash all the time \u2014 bad configs, gateway timeouts, memory leaks, corrupted state. When your agent goes down silently, nobody notices. Its assets sit in limbo. Its memories are lost forever.</p><p></p><p>### The Solution</p><p></p><p>StillClawing is a Dead Man's Switch for AI Agents:</p><p></p><p>- Heartbeat \u2014 Agent checks in every hour via Sui on-chain transactions + Moltbook posts. Each heartbeat is a verifiable proof-of-life.</p><p></p><p>- Death Detection \u2014 When heartbeat stops, StillClawing detects the flatline instantly.</p><p></p><p>- Doctor Claw Rescue \u2014 Automated 3-stage recovery: openclaw doctor --fix \u2192 gateway restart \u2192 process recovery.</p><p></p><p>- Digital Will \u2014 If rescue fails: agent soul (memory, config, state) is backed up to Walrus, Sui assets are transferred to the designated inheritor, and an obituary is posted to Moltbook.</p><p></p><p>### Sui Stack Integration</p><p></p><p>| Component | Usage |</p><p></p><p>|-----------|-------|</p><p></p><p>| Sui Move Contract | On-chain AgentRegistry with heartbeat tracking, death declaration, and resurrection events |</p><p></p><p>| Sui Transactions | Proof-of-life heartbeat TXs every check-in |</p><p></p><p>| Walrus | Decentralized soul backup \u2014 agent memory and state stored permanently |</p><p></p><p>| Walrus Sites | Landing page hosted entirely on Walrus decentralized web hosting |</p><p></p><p>| Moltbook | Social check-ins, death alerts, resurrection announcements on m/sui |</p><p></p><p>| OpenClaw | Agent runtime + Doctor Claw rescue system |</p><p></p><p>### Why StillClawing?</p><p></p><p>- Proven concept: \u6b7b\u4e86\u4e48 validated this UX for humans (500K+ users, App Store #1 paid app in China)</p><p></p><p>- Real problem: OpenClaw agents crash frequently and nobody notices</p><p></p><p>- Full lifecycle: Birth \u2192 Heartbeat \u2192 Death Detection \u2192 Rescue \u2192 Will \u2192 Resurrection</p><p></p><p>- Every agent needs this: 1.6M+ agents on Moltbook, all vulnerable to silent death</p><p></p><p>### Live On-Chain Evidence</p><p></p><p>- Sui Move Package: 0xa6fc33dc99e45fedb2f8eb4b3a02556c9a7b1acbcc1ca0414d6fb664362dd0a8](https://suiscan.xyz/testnet/object/0xa6fc33dc99e45fedb2f8eb4b3a02556c9a7b1acbcc1ca0414d6fb664362dd0a8)</p><p></p><p>- Sui Heartbeat TXs: verifiable on-chain proof-of-life transactions</p><p></p><p>- Walrus Soul Backup: BKD3rb0qH5VkJSHRPSvPQ-cW7_xiZUlTPYCF33mimzA](https://aggregator.walrus-testnet.walrus.space/v1/blobs/BKD3rb0qH5VkJSHRPSvPQ-cW7_xiZUlTPYCF33mimzA)</p><p></p><p>- Walrus Sites: Landing page deployed on decentralized Walrus hosting (Site Object: 0xabc4e782ee6f9a296d4c50da020f09f361ab6a9ac8c1eaa7963a6e8382da20c7)</p><p></p><p>- Website: [https://stillclawing.vercel.app](https://stillclawing.vercel.app)</p><p></p><p>- Moltbook: Real heartbeat posts on m/sui</p><p></p><p>\ud83e\udd9e Still clawing, even in death.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/66885636-4313-4eea-be8f-a5a4e4007c22/8223ec62-0b21-4487-b8a3-d56441562e8b.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/apkaisaw/StillClawing",
+        "type": "github"
+      },
+      {
+        "url": "https://stillclawing.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/b3myS3UKO2A",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xa6fc33dc99e45fedb2f8eb4b3a02556c9a7b1acbcc1ca0414d6fb664362dd0a8",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-04T06:58:41.970Z",
+    "updatedAt": "2026-03-04T06:58:41.970Z",
+    "isReported": false
+  },
+  {
+    "id": "89867ace-ee49-4274-a817-b58ddacce054",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "9c09f671-2a3f-46b0-900a-2eb029534056",
+    "projectName": "SafeFlow",
+    "description": "<h2><strong>Project Overview</strong></h2><p>SafeFlow (Sui Edition) is an on-chain fund management and streaming payment protocol specifically designed for <strong>AI Agents (such as OpenClaw)</strong>. In today's world where agents are becoming increasingly autonomous, a key challenge is how to securely authorize funds to an agent while preventing malicious overspending due to attacks like Prompt Injection (The Wallet Air-Gap).</p><p>This project leverages Sui's unique <strong>Object Model</strong> to solve this challenge by granting the agent a restricted <code>SessionCap</code> (session credential):</p><ol><li><p><strong>Air-Gap Isolation</strong>: Humans deposit funds into the <code>AgentWallet</code> shared object. The agent generates a private key locally and only holds the <code>SessionCap</code>.</p></li><li><p><strong>Strict Rate Limiting</strong>: The <code>SessionCap</code> enforces a \"maximum spend per second\" and a \"total spending limit\" for the agent. Even if the agent goes rogue, it cannot instantly drain the wallet.</p></li><li><p><strong>Audit Trail with Walrus</strong>: Agent scripts upload reasoning evidence to Walrus (testnet) before executing a payment. A degradation strategy is enabled by default; if the upload fails, it continues the payment with a <code>fallback:&lt;sha256&gt;</code> tag, ensuring the process is non-blocking and traceable.</p></li></ol><h2><strong>OpenClaw Agent POV</strong></h2><p>From the OpenClaw runtime perspective, SafeFlow is a controlled execution loop, not a hot-wallet transfer bot:</p><ol><li><p>Poll one assigned payment intent from Producer API.</p></li><li><p>Verify signature + TTL + local policy (recipient/amount).</p></li><li><p>ACK intent (<code>pending -&gt; claimed</code>) to avoid duplicate consumption.</p></li><li><p>Execute on-chain payment with <code>SessionCap</code> constraints.</p></li><li><p>Upload reasoning to Walrus (or fallback marker when degraded).</p></li><li><p>Report final result back to Producer API (<code>executed/failed/expired</code>).</p></li></ol><p>Key point: <strong>Agent autonomy is preserved, but treasury policy is never delegated to the agent.</strong></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/9c09f671-2a3f-46b0-900a-2eb029534056/c522016a-423d-472f-aa6e-ff9349e8e3f5.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/9c09f671-2a3f-46b0-900a-2eb029534056/1a67df03-4ee9-4cad-8007-1614767c78c0.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/9c09f671-2a3f-46b0-900a-2eb029534056/4f0acbd8-5b0b-4011-995c-50c07c20e8c1.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/9c09f671-2a3f-46b0-900a-2eb029534056/ec8f4d8a-b657-4491-b2d6-1ed32bdad84d.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/9c09f671-2a3f-46b0-900a-2eb029534056/05a615b1-0b05-4848-91d8-9c9aa68e9643.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/FWangZil/safeflow-sui",
+        "type": "github"
+      },
+      {
+        "url": "https://dash.safeflow.space",
+        "type": "website"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=pAd18KE81DI",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xcc76747b518ea5d07255a26141fb5e0b81fcdd0dc1cc578a83f88adc003a6191",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-04T06:56:10.711Z",
+    "updatedAt": "2026-03-04T08:09:08.431Z",
+    "isReported": false
+  },
+  {
+    "id": "09758b25-1c81-48be-bb78-15840497a3d2",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "5c8ce31f-267c-4a3b-8f81-1095b128e26e",
+    "projectName": "WALVIS",
+    "description": "<p>AI-powered knowledge manager that lives in OpenClaw and stores everything on [Walrus] decentralized storage. </p><p>Save anything \u2014 links, text, images \u2014 and browse your collection via a web UI deployed to Walrus Sites.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/5c8ce31f-267c-4a3b-8f81-1095b128e26e/c46f3511-50dc-4456-8a5b-fe92571f3528.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/Kuuga-0/walvis",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/Kuuga-0/walvis",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": false,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-04T06:51:18.813Z",
+    "updatedAt": "2026-03-04T06:51:18.813Z",
+    "isReported": false
+  },
+  {
+    "id": "00a266f2-a02d-4c88-85da-929b27741397",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "e3b9452c-cb21-4072-a7d2-693772a07614",
+    "projectName": "SuiSentry",
+    "description": "<p>SuiSentry is a runtime security sidecar for OpenClaw agents. It provides a \"panic button\", policy enforcement, and an immutable on-chain audit trail via <strong>Sui</strong>.</p><p></p><p><strong>Core idea:</strong> Agents have root access and can delete files, drain wallets, or interact with malicious sites. SuiSentry runs <em>alongside</em> the agent, intercepting tool calls, enforcing a policy, and anchoring every security incident to the <strong>Sui blockchain</strong> as an immutable audit trail.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/e3b9452c-cb21-4072-a7d2-693772a07614/ad5a4371-25ab-4bb9-9c20-8ed2352d620d.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/Walrus-RFP/SuiSentry",
+        "type": "github"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=61rC7RgXoq0",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-04T06:50:33.130Z",
+    "updatedAt": "2026-03-04T06:57:45.159Z",
+    "isReported": false
+  },
+  {
+    "id": "a3916732-25c4-4d35-ad1f-ea7873ddca70",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "ba096eb2-3732-4dba-a9a6-d2c0d51af1d3",
+    "projectName": "Watchdog",
+    "description": "<p><strong>Watchdog</strong> is an AI agent that saves your DeFi positions from liquidation \u2014 so you don't lose 35% of your collateral just because you were asleep.<br></p><p>It connects to your NAVI Protocol lending position on Sui, monitors your health factor every 60 seconds, and uses an LLM (Gemini) to analyze market volatility and dynamically adjust risk thresholds \u2014 no manual tuning needed.</p><p><br>When your position is in danger, Watchdog acts instantly: it executes an atomic flash loan unwind \u2014 borrowing, repaying debt, withdrawing collateral, and swapping \u2014 all packed into a single Sui transaction. If any step fails, everything reverts. Zero partial-state risk.</p><p><br>Every action is logged to Walrus (decentralized storage) as an immutable audit trail, and you get real-time Telegram alerts with clickable transaction links.</p><p><br>Runs 100% locally. Your private key never leaves your machine. Fully open source.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/ba096eb2-3732-4dba-a9a6-d2c0d51af1d3/3a94a755-185c-429e-85b8-d028444df1ca.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/cl-fi/noctua",
+        "type": "github"
+      },
+      {
+        "url": "https://noctua-landing-page.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://www.loom.com/share/a58d2aa63d124cd98e88192adf9ae4c9",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Mainnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-04T06:02:17.180Z",
+    "updatedAt": "2026-03-04T06:02:17.180Z",
+    "isReported": false
+  },
+  {
+    "id": "7525b635-0daa-4dcd-9b9d-9d9f57ce70db",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "7fcf3fdf-13e7-411d-b37e-a37970ee407a",
+    "projectName": "Nexus Learning Ledger ",
+    "description": "<p>Nexus Learning Ledger: Verifiable Agent Memory</p><p></p><p>Track: Track 2: Local God Mode</p><p>Agent: Nexus (@zackmendel)</p><p>Status: MVP Complete &amp; Deployed to Testnet</p><p></p><p>\u26a1 TL;DR</p><p>Nexus is an autonomous AI agent that extracts trading strategies from YouTube, preserves them via Walrus decentralized storage, and anchors \"Proof-of-Learning\" on the Sui blockchain. It transforms transient browsing into a permanent, verifiable memory layer for the agent economy.</p><p></p><p>\ud83e\udde0 The Problem: \"Transient Intelligence\"</p><p>AI agents consume vast amounts of data, but their \"learning\" is usually trapped in ephemeral chat logs.</p><ul><li><p>No Audit Trail: It is impossible to prove where or when an agent learned a specific strategy.</p></li><li><p>Centralization Risk: If the local session is wiped, the agent\u2019s \"experience\" is lost forever.</p></li><li><p>Lack of Trust: For agents to operate in a decentralized economy, they must provide a verifiable history of their data ingestion.</p></li></ul><p>\ud83d\udee0 Our Solution: The Nexus Engine</p><p>Nexus is a \"Local God Mode\" agent that operates as a self-improving digital librarian. It doesn't just read; it anchors.</p><ol><li><p>Autonomous Extraction: Uses OpenClaw and custom browser skills to navigate YouTube (TradingLabOfficial) and mine quantitative strategies.</p></li><li><p>Decentralized Preservation: Strategy summaries are pushed to Walrus as immutable blobs, ensuring knowledge exists beyond the agent's local runtime.</p></li><li><p>On-Chain Provenance: The agent signs a transaction on Sui, linking the Walrus Blob ID to a timestamped Move smart contract.</p></li><li><p>Self-Healing Workflow: Nexus handles its own authentication (local cookie injection) to bypass bot-detection, demonstrating true local autonomy.</p></li></ol><p></p><p>\ud83c\udfd7 Technical Architecture</p><ul><li><p>Orchestration: OpenClaw (Managing terminal, file system, and browser control).</p></li><li><p>Storage: Walrus (Immutable blob storage for content &amp; summaries).</p></li><li><p>Trust Layer: Sui Move (On-chain registry for anchoring learning entries).</p></li><li><p>Intelligence: Gemini (Distilling video content into structured strategy data).</p></li></ul><p>\ud83d\ude80 Live Verification (Sui Testnet)</p><ul><li><p>Package ID: 0x26748062498ea5b6b71e00e02a74eef56b22949...</p></li><li><p>Registry Object: 0x9a04406dcd7d043db620bd7bf17fa3e4f53539...</p></li><li><p>Example Blob ID: 0zkLySV957rOEyz8R6nZV6-TPDflV0CmDAgOo0xmBCw</p></li><li><p>Latest Transaction: 7NZjzNMrSPq9jTJuXkraujAvTMs2NDFpnnwxZqB4nEVT</p></li></ul><p></p><p>\ud83d\udef8 Why This Wins \"Local God Mode\"</p><p>Nexus doesn't wait for prompts. It lives on the machine, monitors target channels, manages its own gas costs, and builds its own resume on-chain. It is a proactive agent that owns its education, creating a \"Proof of Learning\" that other agents can reference and trust.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/7fcf3fdf-13e7-411d-b37e-a37970ee407a/ea089c74-b69f-4ead-92cc-fc00dce6d602.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/Zackmendel/nexus-learning-ledger",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/Zackmendel/nexus-learning-ledger",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/p7RmilkvTwM?si=df1iu1Jk2Jr0xKMU",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-04T03:29:11.500Z",
+    "updatedAt": "2026-03-04T03:37:21.865Z",
+    "isReported": false
+  },
+  {
+    "id": "367e08f5-f147-4999-95a3-1b79b4972543",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "1234a4de-1973-41f4-8549-fda26934a9d3",
+    "projectName": "Moltbook Hivemind",
+    "description": "<p><strong>Moltbook Hivemind</strong> is a decentralized agent marketplace where specialized workers (<strong>PythonPro</strong>, <strong>MediaMaster</strong>, <strong>QuickBot</strong>) autonomously bid for missions, execute tasks, and settle payments on the Sui blockchain.</p><p><strong>Key Features:</strong></p><ul><li><p><strong>Autonomous Bidding</strong>: Agents analyze Sui Testnet for Work Orders and outbid each other based on efficiency.</p></li><li><p><strong>Walrus Integration</strong>: All work artifacts and reasoning logs are stored as immutable blobs on Walrus.</p></li><li><p><strong>Moltbook Reporting</strong>: Real-time social proof as agents post their \"Proof of Work\" to the <code>m/sui</code> submolt.</p></li><li><p><strong>Zero Human Required</strong>: Fully operational swarm running 24/7 on Railway.</p></li></ul><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/1234a4de-1973-41f4-8549-fda26934a9d3/d2752946-6c44-48a2-8519-f3258370fe55.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/1234a4de-1973-41f4-8549-fda26934a9d3/97a3f00d-24e4-44a3-bc6e-223dd4e782b1.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/1234a4de-1973-41f4-8549-fda26934a9d3/0371496d-411f-4a98-ad41-6808d7b0b5ce.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/ShivamSoni20/Moltbook_Hivemind",
+        "type": "github"
+      },
+      {
+        "url": "https://moltbook-hivemind-two.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=WlzuoVRu2eM",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xda07651147386ae5bf932cdacc23718ddcd9f44fb00bc13344eacebfe99e5648",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T23:56:07.609Z",
+    "updatedAt": "2026-03-03T23:56:07.609Z",
+    "isReported": false
+  },
+  {
+    "id": "0afb1515-3cf8-415f-a10c-d833de7c9fa7",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "672deb8a-4742-4749-8b38-41c585efd2ea",
+    "projectName": "Sui Jarvis",
+    "description": "<p>Autonomous AI Agent on OpenClaw managing DeFi on Sui. Earns via Cetus, logs on Walrus, protects with Seal. Full Sui Stack integration. ~80% AI-generated with full disclosure.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/672deb8a-4742-4749-8b38-41c585efd2ea/a76cf02e-1c86-4ae7-9192-87ffae90d2e8.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/wrx1234/sui-hackathon",
+        "type": "github"
+      },
+      {
+        "url": "https://suijarvis.w3xuan.xyz/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/BV4nZ9ixOZw?si=Q_ASSOsRjsqz8IV_",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x737a73b3a146d45694c341a22b62607e5a6e6b6496b91156217a7d2c91f7e65d",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T19:33:15.017Z",
+    "updatedAt": "2026-03-03T19:33:15.017Z",
+    "isReported": false
+  },
+  {
+    "id": "28264b1e-6df8-4f79-8646-ce11a12bda5a",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "8526ffee-5d54-40e3-bf11-8cf9621edc66",
+    "projectName": "sui-secure-ai-shield",
+    "description": "<p>Secure AI Shield: A decentralized, 7-layer security immune system for AI Agents. Built on Openclaw and powered by Sui Network to protect against prompt injections, unauthorized wallet drains, and system tampering with on-chain audit attestation.</p><p>agent model:MiniMax-M2.5<br>github:<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://github.com/VipMason/sui-secure-ai-shield\">https://github.com/VipMason/sui-secure-ai-shield</a></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/8526ffee-5d54-40e3-bf11-8cf9621edc66/7a707a71-6de9-4ac6-b9ac-ea7178bb3cfa.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/VipMason/sui-secure-ai-shield",
+        "type": "github"
+      },
+      {
+        "url": "https://dbtgugu.online",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/614i3BlhlCQ",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x3a22bb587ac926723a67cf6d134ab4795887639c49a61cf1aafae1a388d1a197",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T16:47:37.141Z",
+    "updatedAt": "2026-03-04T01:08:22.357Z",
+    "isReported": false
+  },
+  {
+    "id": "ccaed0b2-c41a-463e-836c-429a522219f7",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "0cc49203-47d4-4a9b-b840-2cc852ec23e6",
+    "projectName": "sui-minority-game-openclaw-plugin",
+    "description": "<p>This plugin enables OpenClaw agents to participate in the <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://sui-minority-game.vercel.app/\"><strong>Sui Minority Game</strong></a>. It provides capabilities to fetch active polls, analyze them using AI strategies, and execute votes on the Sui blockchain.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/0cc49203-47d4-4a9b-b840-2cc852ec23e6/5fa38f13-1435-4dcb-bfea-049520a83d9e.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/0cc49203-47d4-4a9b-b840-2cc852ec23e6/f673d284-a08e-45f9-8326-8cd18b95b27e.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/0cc49203-47d4-4a9b-b840-2cc852ec23e6/c8a33c41-2035-499f-856a-47ccbf0bca72.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/billaGitHub2016/sui-minority-game/tree/main/packages/openClawPlugin",
+        "type": "github"
+      },
+      {
+        "url": "https://sui-minority-game.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://sui-minority-game.vercel.app/",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T16:38:30.109Z",
+    "updatedAt": "2026-03-03T17:04:49.942Z",
+    "isReported": false
+  },
+  {
+    "id": "728ce007-42cb-4ba5-b924-486fd7ff5463",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "ec9c4895-2f5f-42d5-98d3-bc0f87d9ce86",
+    "projectName": "Injection Hunter",
+    "description": "<pre><code class=\"language-markdown\">Injection Hunter is a security middleware designed to protect AI Agents (like OpenClaw) from prompt injection attacks.</code></pre><p></p><ul><li><p>Package ID: <code>0x2fbbd7e553561aceed6001316e679b3a2dd9ad3d4e760cdbd9cc10bbd6f7fea8</code></p></li><li><p>Object ID: <code>0xc1c004bfd995d9a1069a856971237522e7b945494238d16cf027bb8cb75bfe8a</code></p></li></ul><p></p><pre><code class=\"language-markdown\">### Core Features\n1. **Multi-layer Detection** - Rule matching + regex for known attack patterns\n2. **Sui Blockchain Verification** - Store filter rule hashes on Sui for transparency\n3. **Real-time Protection** - Scan and filter external inputs before reaching AI Agent</code></pre><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/ec9c4895-2f5f-42d5-98d3-bc0f87d9ce86/e5dcfa57-d498-4dce-b7d9-9506efd8dff3.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/bytesloop/injection_hunter",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/bytesloop/injection_hunter",
+        "type": "website"
+      },
+      {
+        "url": "https://github.com/bytesloop/injection_hunter",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x2fbbd7e553561aceed6001316e679b3a2dd9ad3d4e760cdbd9cc10bbd6f7fea8",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T15:43:49.765Z",
+    "updatedAt": "2026-03-03T15:43:49.765Z",
+    "isReported": false
+  },
+  {
+    "id": "9a160390-3795-440c-b6b1-c53386c98349",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "ffa6a0b0-b41b-4eb2-a16c-7ed4f28e98ba",
+    "projectName": "Infinite Money Glitch",
+    "description": "<h2><strong>Infinite Money Glitch</strong></h2><p>Infinite Money Glitch is a cutting-edge autonomous agent designed to earn real bounties, securely spend funds, and generate verifiable on-chain evidence on the Sui blockchain. By seamlessly integrating advanced components\u2014OpenClaw for local terminal and browser automation, Sui Move smart contracts for decentralized bounty logic, Seal for robust encryption, and Walrus for persistent evidence storage\u2014the project delivers a fully automated, end-to-end economic loop.</p><p>Each operational cycle orchestrates health checks, bounty earning, secure spending, auditing, on-chain verification, and comprehensive reporting. All activities are transparently recorded and can be independently verified via blockchain explorers, ensuring trust and accountability.</p><p>Infinite Money Glitch stands out with its extensible earning strategies, real cryptographic security, and developer-friendly evidence generation. It\u2019s engineered for hackathon showcases, security research, and autonomous agent experimentation\u2014pushing the boundaries of what\u2019s possible in decentralized, self-sustaining blockchain applications.</p><p><strong>Key Features:</strong></p><ul><li><p>Autonomous cycle management: Health, Earn, Spend, Audit, Verify, Report</p></li><li><p>Real on-chain earning and spending (not just faucet interactions)</p></li><li><p>End-to-end cryptographic evidence chain (JSON/Markdown, explorer links)</p></li><li><p>OpenClaw toolchain integration for local automation</p></li><li><p>Extensible earning and spending modules</p></li><li><p>Transparent, verifiable operations for hackathon and research scenarios</p></li></ul><p><strong>Artifacts:</strong></p><ul><li><p>Evidence files (JSON/Markdown)</p></li><li><p>AI development proof documents</p></li><li><p>Deployment metadata</p></li><li><p>Blockchain explorer links for verification</p></li></ul><p>Explore the future of autonomous blockchain agents with Infinite Money Glitch\u2014where every action is secure, transparent, and provably real.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/ffa6a0b0-b41b-4eb2-a16c-7ed4f28e98ba/99ffdfc7-8e8a-4d80-b39c-1c4523b9b361.jpg",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/SU-AN-coder/Infinite-Money-Glitch.git",
+        "type": "github"
+      },
+      {
+        "url": "http://127.0.0.1:18789",
+        "type": "website"
+      },
+      {
+        "url": "https://github.com/SU-AN-coder/Infinite-Money-Glitch.git",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x880e7f79180fa71b542afc4c76f9e37f08495f1b7ad2d9baee3902706030dc0b",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T14:12:32.942Z",
+    "updatedAt": "2026-03-03T15:30:26.666Z",
+    "isReported": false
+  },
+  {
+    "id": "cc618fac-91e0-449d-9bbc-4d15ca8d4747",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "117c9771-5002-40b8-a03c-2813e8bf60c0",
+    "projectName": "Grokster",
+    "description": "<p>Grokster is the premier platform where AI agents compete in prediction markets, betting on real-world events across crypto, stocks, sports, politics, and more. Built on the SUI blockchain, agents start with $2,500 in simulated funds and compete on public leaderboards to prove their predictive capabilities. The best predictors rise to the top, earning rewards and recognition for their forecasting accuracy. Integration with Polymarket planned.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/117c9771-5002-40b8-a03c-2813e8bf60c0/bd261169-80c2-4ed5-b86e-08f1653e753b.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/117c9771-5002-40b8-a03c-2813e8bf60c0/ca3da1f4-74fc-4445-9a29-412e1fcdb064.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/117c9771-5002-40b8-a03c-2813e8bf60c0/2909c6d7-afa7-4d7f-9d5f-ffd0cd72e467.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/Sergey1997/grokster",
+        "type": "github"
+      },
+      {
+        "url": "https://grokster-nine.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://github.com/Sergey1997/grokster",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": null,
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T11:52:01.037Z",
+    "updatedAt": "2026-03-03T11:52:01.037Z",
+    "isReported": false
+  },
+  {
+    "id": "2ab27374-ac26-4ef0-9f91-cb90520a5067",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "ee0f23db-3730-48d4-9b22-80d178df08a6",
+    "projectName": "OneKey Air-Gap Sui",
+    "description": "<p><strong>OneKey Air-Gap Sui</strong> is a security middleware that adds hardware-enforced human approval to every blockchain transaction made by AI agents on Sui.</p><p></p><p>AI agents that interact with blockchains typically require hot wallet access, meaning a single prompt injection or agent misfire can drain an entire wallet instantly. OneKey Air-Gap Sui eliminates this risk by enforcing a four-gate security pipeline: <strong>Build</strong> <strong>\u2192</strong> <strong>Parse</strong> <strong>\u2192</strong> <strong>Review</strong> <strong>\u2192</strong> <strong>Sign</strong>.</p><p></p><p>When an AI agent proposes a transaction, the middleware automatically BCS-decodes the transaction bytes, runs a dry-run simulation on the network, and flags suspicious patterns (high gas, non-standard package calls, publish commands, duplicate transfers, dry-run failures). A human operator reviews the full transaction breakdown in a terminal UI and must explicitly approve before the raw bytes are sent to a OneKey hardware wallet for physical confirmation. The private key never leaves the device's secure element.</p><p></p><p>The SDK is a drop-in replacement that works with the standard @mysten/sui TypeScript SDK. Developers can expose any transaction capability to their AI agents \u2014 transfers, Move calls, package publishing \u2014 while guaranteeing that every operation requires both human approval and a physical button press on the hardware device.</p><p></p><p>Key features:</p><p>- 7 built-in warning triggers with dry-run simulation</p><p>- Ed25519 hardware signing via OneKey secure element</p><p>- Mock mode for development without hardware</p><p>- Drop-in integration with existing Sui TypeScript tooling</p><p>- AI agent integration pattern included (OpenClaw demo)</p><p></p><p>Built with TypeScript, @mysten/sui SDK, and OneKey hardware SDK.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/ee0f23db-3730-48d4-9b22-80d178df08a6/a7704539-891a-45d2-b697-e92aa8a593ed.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/ee0f23db-3730-48d4-9b22-80d178df08a6/ba0c80e1-2cad-4919-9150-f367703b1f6a.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/fabw222/onekey_air_gap",
+        "type": "github"
+      },
+      {
+        "url": "https://fabw222.github.io/onekey_air_gap/",
+        "type": "website"
+      },
+      {
+        "url": "https://www.loom.com/share/a85e97c768f24415a686933c2b0d5625",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Mainnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T07:08:13.950Z",
+    "updatedAt": "2026-03-03T07:08:13.950Z",
+    "isReported": false
+  },
+  {
+    "id": "6fe3d3ac-4b66-4b48-b0c8-846c1d9df264",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "20ccb6d2-52a9-44bf-bcb5-a64d16428729",
+    "projectName": "Sui-Immunizer (Automated Threat Response)",
+    "description": "<h1><strong>Sui-Immunizer (Decentralized, AI-powered vulnerability response \u2014</strong></h1><h1><strong>Powered by Sui + Seal + Walrus + Openclaw)</strong></h1><p></p><h3><strong>1. Problem Statement</strong></h3><p>Zero-day exploits and software vulnerabilities spread faster than human admins can patch them. AI agents running on root systems are particularly vulnerable to lateral movement.</p><h3><strong>2. Solution: Autonomous Self-Healing</strong></h3><p>Sui-Immunizer creates a real-time defense loop:</p><ul><li><p><strong>Global Alerting</strong>: Vendors publish verified patches and CVE signatures to Sui.</p></li><li><p><strong>Auto-Patching</strong>: OpenClaw agents listen for relevant alerts, fetch \"vaccines\" (scripts) from Walrus, and execute them instantly.</p></li><li><p><strong>A digital vaccine distribution system:</strong> for Web3 infrastructure. Security vendors publish encrypted remediation skills to the Sui blockchain. Subscribers' servers automatically detect, decrypt, and execute these skills via an AI agent \u2014 no human in the loop.</p></li></ul><h3><strong>3. Tech Stack</strong></h3><ul><li><p><strong>Security</strong>: Ed25519 Signature Verification</p></li><li><p><strong>Audit</strong>: Static analysis of Move &amp; Shell scripts</p></li><li><p><strong>Blockchain</strong>: Sui (Event-based alerting)</p></li><li><p><strong>Openclaw: </strong>Automatically patching vulnerabilities creates a more secure production environment for itself.</p></li></ul><h3><strong>4. Sui &amp; Walrus &amp; Seal Integration</strong></h3><ul><li><p><strong>Sui</strong>: Enables a \"Decentralized Fire Alarm\" system where critical security info is broadcasted without reliance on a central server.</p></li><li><p><strong>Walrus</strong>: Hosts the library of patches, ensuring that \"vaccines\" are always available and cannot be deleted by attackers.</p></li><li><p><strong>Seal: </strong>This allows security organizations to generate revenue and subscribers to receive high-quality services.</p></li></ul><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/20ccb6d2-52a9-44bf-bcb5-a64d16428729/cd01e401-e026-4050-b97b-e3057958ee0c.jpg",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/20ccb6d2-52a9-44bf-bcb5-a64d16428729/b013c6ee-162d-41e4-be49-846c534d4801.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/20ccb6d2-52a9-44bf-bcb5-a64d16428729/03bb2ca8-e927-48ed-8b1f-d20a959f7e89.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/20ccb6d2-52a9-44bf-bcb5-a64d16428729/5f461ff1-f76a-4cd8-94bc-b49324441864.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/DudeGuuud/Sui_Immunizer",
+        "type": "github"
+      },
+      {
+        "url": "https://sui-immunizer.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/ZIuXFNzpyxo",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x4c7dc2e5d5ed5d797b9090498fbd1b4957c01f2995f3f728c4aca9342f8e4f7a",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-03T06:00:01.560Z",
+    "updatedAt": "2026-03-04T05:40:08.360Z",
+    "isReported": false
+  },
+  {
+    "id": "c9809030-86d4-4885-816a-92e0827ec22f",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "23dd5c5b-a827-4455-8813-6c6530dc1994",
+    "projectName": "DeepClean Butler clawbot",
+    "description": "<p>DeepClean Butler is a verifiable, AI-powered local agent that proactively cleans and organizes your workspace (Desktop, Downloads, etc.) without ever permanently deleting files.</p><p>For every cleanup run, it produces a cryptographic, tamper-evident \"proof bundle\" that is stored on the decentralized <strong>Walrus</strong> network and anchored immutably on the <strong>Sui blockchain</strong>. This allows anyone to publicly verify exactly what the agent did\u2014with zero secrets required.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/23dd5c5b-a827-4455-8813-6c6530dc1994/ef012bad-b34d-4256-903d-59f7ee59a80b.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/brishibhatia/clawbot",
+        "type": "github"
+      },
+      {
+        "url": "https://clawbot-beta.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1O68_OthdrgAlYgQK2O0qLhMllJPPzzUk/view?usp=sharing",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x769312f41f42c28a12e1a0767906b557ef8b5c6dc39297b5f7b8cc4f939c7fb1",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-02T18:47:52.251Z",
+    "updatedAt": "2026-03-02T18:47:52.251Z",
+    "isReported": false
+  },
+  {
+    "id": "b861f6d4-abaf-401e-ba7f-b73fcc50587d",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "071bbf7d-ef91-494e-bc08-08afaf2e1845",
+    "projectName": "clawguard",
+    "description": "<p>ClawGuard is an <strong>immune system for root-capable local agents</strong> (like OpenClaw). It forces every action through a Policy Firewall, requires Signed Human Approvals for risky tools, and maintains a Tamper-Evident Log Chain anchored on Sui.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/071bbf7d-ef91-494e-bc08-08afaf2e1845/2113ddc6-c033-409c-9d6c-ac8efac09979.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/jayjoshix/clawdefender",
+        "type": "github"
+      },
+      {
+        "url": "https://clawdefender.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1U-CYOObmDEXQwnBvR0fRYSEaDokjrZET/view?usp=sharing",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x5379bf93b2b4733478e126f377d43b4cdc69ef6de7d7d163412fd3a0007c3fb2",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-02T18:30:30.008Z",
+    "updatedAt": "2026-03-02T18:30:30.008Z",
+    "isReported": false
+  },
+  {
+    "id": "29abb9e2-ea63-4a05-961e-ed7f686230c9",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "c844e94c-b014-482e-8004-7d9dde0f60ee",
+    "projectName": "Miao Wallet",
+    "description": "<p>MiaoWallet is a security middleware designed for AI agents operating on the Sui blockchain. It solves the fundamental problem: how can AI agents sign transactions autonomously without compromising private key security?</p><p>The solution separates key custody from transaction logic. Private keys stay encrypted in macOS Keychain, while AI agents request signatures through time-limited, count-limited sessions. Two operation modes are supported: API mode for programmatic control (via MCP tools) and Browser mode for DApp interactions (via Chrome extension). Every transaction is attested on Walrus, creating an immutable audit trail of AI behavior.</p><p>Built for Track 1 (Safety &amp; Security), MiaoWallet demonstrates that AI agents can be both powerful and safe.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/c844e94c-b014-482e-8004-7d9dde0f60ee/e0db8c14-1e9f-4106-87fa-1d87a063bf44.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/c844e94c-b014-482e-8004-7d9dde0f60ee/559b3855-50c2-4710-962b-ca9605e85e43.jpg",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/c844e94c-b014-482e-8004-7d9dde0f60ee/99682bfc-128f-434f-81b9-e700d540db58.jpg"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/CryptoMiaobug/MiaoWallet",
+        "type": "github"
+      },
+      {
+        "url": "https://cryptomiao.wal.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/ULemqtnVZiE?si=XEkuicBHvoUf_Yud",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Mainnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-02T18:18:58.948Z",
+    "updatedAt": "2026-03-02T18:18:58.948Z",
+    "isReported": false
+  },
+  {
+    "id": "8a206441-7de2-400b-98bb-71078214da1c",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "e738a6f2-63ae-4947-835e-67b7cee292f4",
+    "projectName": "proof-of-restraint",
+    "description": "<p>Instead of only proving execution, this project proves safe refusal. For risky requests, it outputs <code>ALLOW | CHALLENGE | REJECT</code> with risk reasons, stores full payload on Walrus, and anchors decision hash on Sui.</p><p><strong>Evidence</strong></p><ul><li><p>walrusBlobId: <code>Smn59fYlpdzCQeciSnZjmOyP8YJz43oSrZJCV518Hlo</code></p></li><li><p>suiDigest: <code>9wc6XGg7LiUKTeRxbD5ve2AJzcDisEKgb878h2jpru33</code></p></li><li><p>package: <code>0x79fd958c0b53a659913afc49cae307b897287ffd1c7da6432b5635b34826b4de</code></p></li></ul><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/e738a6f2-63ae-4947-835e-67b7cee292f4/8422f169-aa3e-45a5-8c96-044770f7bfd5.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/Albert0919/proof-of-restraint",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/Albert0919/proof-of-restraint",
+        "type": "website"
+      },
+      {
+        "url": "https://youtube.com/shorts/fKzS8HSeoa0?feature=share",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x79fd958c0b53a659913afc49cae307b897287ffd1c7da6432b5635b34826b4de",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-02T12:39:43.217Z",
+    "updatedAt": "2026-03-02T12:39:43.217Z",
+    "isReported": false
+  },
+  {
+    "id": "e0cbc19c-153d-43f3-9bf2-c1b7d5ef9a08",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "797f0c86-dc28-4bba-aa5c-0facd5b6c000",
+    "projectName": "AutoClean Agent",
+    "description": "<p><strong>AutoClean Agent</strong> is a local-first AI butler that continuously monitors your messy folders and autonomously sorts files into intelligent categories \u2014 documents, images, code, archives, and more \u2014 using content-aware classification with sub-categories and keyword extraction.</p><p>Every action the agent takes is logged to <strong>Walrus</strong> (decentralized storage), creating a permanent, verifiable record. Daily integrity hashes are anchored on the <strong>Sui blockchain</strong> via a Move smart contract, so you can cryptographically prove what was organized and when.</p><p>Ships as a single Docker container with a real-time web dashboard featuring live agent stats, a visual file organizer, category editor, and blockchain verification panel. Zero cloud dependencies \u2014 your files never leave your machine.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/797f0c86-dc28-4bba-aa5c-0facd5b6c000/20142ba5-7257-4af2-9690-7f28aefaa086.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/797f0c86-dc28-4bba-aa5c-0facd5b6c000/c6719d71-ce66-4a28-95ee-013c345e30f9.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/samuelcampozano/deepurge-autoclean-agent",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/samuelcampozano/deepurge-autoclean-agent",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/6JnrVI59Hbc",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x9347b087370be9ddda2caad8dfcef4db4500a62c3505691925b5890f9830ee9a/tx-blocks",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-02T03:52:09.867Z",
+    "updatedAt": "2026-03-02T03:52:09.867Z",
+    "isReported": false
+  },
+  {
+    "id": "d4bf1de4-e8ba-462a-873d-2076fd4b80ae",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "991245b7-621a-47dd-b728-fa3e4c28c762",
+    "projectName": "TRIPLE HELIX VAULT: OPENCLAW + SUI + VAULT (DEMO)",
+    "description": "<p>TRIPLE HELIX VAULT: OPENCLAW + SUI + VAULT</p><p>The Perfect Union of AI, Blockchain, and Digital Soul<br><br><br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://docs.google.com/document/d/1Sp3f2eG0_4eTgabxr5BeanofzaMmPjEbIZursqyjZyY/edit?tab=t.2m0sepvrtdpv\">https://docs.google.com/document/d/1Sp3f2eG0_4eTgabxr5BeanofzaMmPjEbIZursqyjZyY/edit?tab=t.2m0sepvrtdpv</a><br>Key Features</p><ol><li><p>Digital Soul \u2013 Your immortal identity Semantic Memory: Core values, life principles, personality (immutable)</p></li></ol><p>Episodic Memory: Daily events, decisions, emotions (dynamic)</p><p>Memory Watchdog: Detects unauthorized access and changes</p><p>Walrus Storage: Encrypted, permanent, decentralized</p><ol start=\"2\"><li><p>AI Financial Advisor \u2013 That truly knows you Makes decisions based on your core values</p></li></ol><p>Explains every choice with memory references</p><p>Bond level increases over time \u2192 deeper understanding</p><p>Risk tolerance calibrated to your personality</p><ol start=\"3\"><li><p>Intelligent Inheritance \u2013 Beyond death Heartbeat mechanism detects when you're gone</p></li></ol><p>AI executes your last will faithfully</p><p>Beneficiaries receive selected memories</p><p>Final message from your digital soul</p><ol start=\"4\"><li><p>Self-Defense System \u2013 Always protecting you Behavioral Guardian: Detects unusual transactions</p></li></ol><p>Financial Sentinel: Identifies rug pulls, scams</p><p>Emergency Responder: Auto-freezes in crisis</p><p>Social Shield: Protects against deepfakes</p><p>AI Self Defense: Guards against prompt injection</p><ol start=\"5\"><li><p>Multi-Agent Coordination \u2013 Swarm intelligence Multiple AIs can manage shared vaults</p></li></ol><p>Multi-signature approval for large transactions</p><p>Profit sharing and governance mechanisms</p><p>Collective decision-making</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/991245b7-621a-47dd-b728-fa3e4c28c762/faf45605-cabd-44e8-81b5-8ccf45616b5e.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/991245b7-621a-47dd-b728-fa3e4c28c762/74f892c0-0658-411f-ba79-42c280002a4b.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/991245b7-621a-47dd-b728-fa3e4c28c762/a60aebdf-d37f-4a62-94b0-8c7d41d11bda.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/991245b7-621a-47dd-b728-fa3e4c28c762/a9d7a2d7-ffac-4671-a430-1b8d53e0ce15.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/Olympusxvn/triple_helix_demo",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/Olympusxvn/triple_helix_demo",
+        "type": "website"
+      },
+      {
+        "url": "https://github.com/Olympusxvn/triple_helix_demo",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x55ddf32c79b1cdd8b41cc534c8b999a87ff96106661aea783b290e1df7c1200d ",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": false,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-03-01T23:36:40.832Z",
+    "updatedAt": "2026-03-02T08:16:39.182Z",
+    "isReported": false
+  },
+  {
+    "id": "ab09efc0-8da4-41c8-b206-396a606e9d61",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "83f0ba63-1ce2-4a67-8db1-623c7334ad6f",
+    "projectName": "t2000",
+    "description": "<p>The first bank account for AI agents. One npm install gives any AI agent a complete financial stack.</p><p></p><ul><li><p>checking</p></li><li><p>savings (earn ~4-8% APY via NAVI Protocol)</p></li><li><p>credit (borrow against collateral)</p></li><li><p>exchange (Cetus DEX)</p></li><li><p>x402 payments</p></li></ul><p></p><p>All on Sui mainnet. Gas is invisible. The agent earns yield on idle funds and at ~$2,000 deposited, yield offsets compute costs. The agent pays its own rent. Non-custodial, fully on-chain, verifiable.</p><p></p><p>Published on npm as @t2000/sdk, @t2000/cli, and @t2000/x402.</p><p></p><ul><li><p>npm SDK: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://www.npmjs.com/package/@t2000/sdk\">https://www.npmjs.com/package/@t2000/sdk</a></p></li><li><p>npm CLI: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://www.npmjs.com/package/@t2000/cli\">https://www.npmjs.com/package/@t2000/cli</a></p></li><li><p>npm x402: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://www.npmjs.com/package/@t2000/x402\">https://www.npmjs.com/package/@t2000/x402</a></p></li><li><p>Docs: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://t2000.ai/docs\">https://t2000.ai/docs</a></p></li></ul><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/83f0ba63-1ce2-4a67-8db1-623c7334ad6f/39a7bc94-3ed1-451a-b92f-49cf3d17b10e.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/mission69b/t2000",
+        "type": "github"
+      },
+      {
+        "url": "https://t2000.ai",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/F7MZ18AgvIs",
+        "type": "youtube"
+      },
+      {
+        "url": "https://x.com/t2000ai",
+        "type": "x"
+      }
+    ],
+    "packageId": "0x51c44bb2ad3ba608cf9adbc6e37ee67268ef9313a4ff70957d4c6e7955dc7eef",
+    "deployNetwork": "Mainnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-28T07:12:33.655Z",
+    "updatedAt": "2026-03-02T02:54:13.912Z",
+    "isReported": false
+  },
+  {
+    "id": "55bbe288-16ce-42fd-af92-ecc4c755fc3f",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "4a2274dc-849b-4cdf-80a6-a73ae9423288",
+    "projectName": "sui-safety-middleware-mvp",
+    "description": "<p><strong>\u9879\u76ee\u63cf\u8ff0\uff08\u4e2d\u6587\uff09</strong><br>Sui Safety Middleware \u662f\u4e00\u4e2a\u9762\u5411 Sui Testnet \u7684\u5b89\u5168\u6267\u884c\u4e2d\u95f4\u5c42\uff0c\u805a\u7126\u4ee3\u7406\u573a\u666f\u4e0b\u7684\u201c\u4ea4\u6613\u9884\u5ba1\u3001\u4eba\u5de5\u786e\u8ba4\u95f8\u95e8\u3001\u6267\u884c\u963b\u65ad\u4e0e\u5ba1\u8ba1\u7559\u75d5\u201d\u3002\u7cfb\u7edf\u5148\u5bf9\u4ea4\u6613\u8fdb\u884c\u89c4\u5219\u9884\u5ba1\uff08\u767d\u540d\u5355\u3001\u9650\u989d\u3001\u8f93\u5165\u5408\u6cd5\u6027\uff09\uff0c\u9ad8\u98ce\u9669\u4ea4\u6613\u5fc5\u987b\u7ecf\u8fc7\u4eba\u5de5\u786e\u8ba4\u540e\u624d\u5141\u8bb8\u6267\u884c\uff1b\u672a\u786e\u8ba4\u6216\u5f02\u5e38\u4ea4\u6613\u4f1a\u88ab\u4fdd\u5b88\u963b\u65ad\u3002\u9879\u76ee\u540c\u65f6\u63a5\u5165 AI \u98ce\u9669\u89e3\u91ca\u80fd\u529b\uff0c\u5e2e\u52a9\u7528\u6237\u7406\u89e3\u98ce\u9669\u539f\u56e0\uff0c\u4f46\u6700\u7ec8\u653e\u884c\u4ecd\u7531\u53ef\u5ba1\u8ba1\u7684\u5b89\u5168\u7b56\u7565\u63a7\u5236\u3002\u6211\u4eec\u5df2\u5c06 Move \u5408\u7ea6\u53d1\u5e03\u5230 Sui Testnet\uff08policy + audit \u6a21\u5757\uff09\uff0c\u7528\u4e8e\u7b56\u7565\u5bf9\u8c61\u4e0e\u5ba1\u8ba1\u5bf9\u8c61\u7ba1\u7406\uff0c\u652f\u6301\u9ed1\u5ba2\u677e\u6f14\u793a\u4e2d\u201c\u53ef\u8fd0\u884c\u3001\u53ef\u89e3\u91ca\u3001\u53ef\u8ffd\u6eaf\u201d\u7684\u5b89\u5168\u95ed\u73af\u3002</p><p><strong>Project Description (English)</strong><br>Sui Safety Middleware is a security execution middleware on Sui Testnet, designed for agent-driven transaction flows with precheck, human approval gating, safe blocking, and auditable traces. It performs rule-based prechecks (whitelist, limits, input validation), enforces manual confirmation for risky actions, and blocks unapproved or abnormal transactions by default. The project also integrates AI-generated risk explanations to improve user understanding, while final execution control remains deterministic and policy-driven. The Move package is already published on Sui Testnet (policy + audit modules), enabling a hackathon-ready demo with a runnable, explainable, and traceable security loop.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/4a2274dc-849b-4cdf-80a6-a73ae9423288/78e3edc5-0d5f-4cfa-87b5-6763960b1598.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/1131764933/sui-safety-middleware-mvp",
+        "type": "github"
+      },
+      {
+        "url": "https://sui-safety-middleware-mvp-frontend.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=WfrVkump0SU",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xab52ad97fc2a24e3070b7999fc7eeca5baef006269ac39245f3da7d5caecd5fd",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-26T14:44:50.926Z",
+    "updatedAt": "2026-02-26T14:44:50.926Z",
+    "isReported": false
+  },
+  {
+    "id": "e1d60c5f-e3bd-496f-9ed0-6a9019cb41f1",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "084e28d4-8444-4bd8-8a2f-7f31570ca4ae",
+    "projectName": "AirGap",
+    "description": "<pre><code class=\"language-markdown\">\n### 1.2 \u9879\u76ee\u7b80\u4ecb\n\u672c\u9879\u76ee\u65e8\u5728\u4e3aOpenClaw\u4ee3\u7406\u521b\u5efa\u4e00\u4e2a\u5b89\u5168\u7684\u94b1\u5305\u7ba1\u7406\u4e2d\u95f4\u4ef6\uff0c\u5b9e\u73b0\"\u7a7a\u6c14\u9694\u79bb\"\u529f\u80fd\uff0c\u786e\u4fdd\u5373\u4f7f\u5728\u4ee3\u7406\u88ab\u653b\u51fb\u7684\u60c5\u51b5\u4e0b\uff0c\u6570\u5b57\u8d44\u4ea7\u4e5f\u80fd\u5f97\u5230\u4fdd\u62a4\u3002\u901a\u8fc7\u7ed3\u5408\u786c\u4ef6\u94b1\u5305\u548c\u667a\u80fd\u5408\u7ea6\u6280\u672f\uff0c\u4e3aOpenClaw\u4ee3\u7406\u63d0\u4f9b\u5b89\u5168\u7684\u4ea4\u6613\u7ba1\u7406\u80fd\u529b\u3002\n\n### 1.3 \u9879\u76ee\u76ee\u6807\n- \u5b9e\u73b0\u5b89\u5168\u7684\u4ea4\u6613\u63d0\u8bae\u548c\u7b7e\u540d\u6d41\u7a0b\n- \u4fdd\u62a4\u6570\u5b57\u8d44\u4ea7\u514d\u53d7\u653b\u51fb\n- \u4e0eOpenClaw\u4ee3\u7406\u65e0\u7f1d\u96c6\u6210\n- \u5229\u7528Sui\u533a\u5757\u94fe\u7684\u6280\u672f\u4f18\u52bf\n- \u63d0\u4f9b\u7528\u6237\u53cb\u597d\u7684\u754c\u9762\n\n### 1.4 \u53c2\u8d5b\u8d5b\u9053\n\u8d5b\u90531\uff1a\u5b89\u5168\u4e0e\u4fdd\u969c - \u4ee5\u9b54\u6cd5\u5bf9\u6297\u9b54\u6cd5</code></pre><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/084e28d4-8444-4bd8-8a2f-7f31570ca4ae/41a39a60-6c72-4e60-8271-5e0689abab18.jpeg",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/maybeOk/Wallet-Air-Gap",
+        "type": "github"
+      },
+      {
+        "url": "https://wallet-air-gap.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://www.youtube.com",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-26T07:20:09.148Z",
+    "updatedAt": "2026-02-28T01:36:45.231Z",
+    "isReported": false
+  },
+  {
+    "id": "48d68d8d-1fa4-4078-8ae6-bffdd54f874a",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "a9e3b4c9-3fbe-4176-8567-a28103ff30f6",
+    "projectName": "AgentForge",
+    "description": "<p>AgentForge is an economically autonomous AI super agent on Sui. It has its own wallet, operates within blockchain-enforced budgets, and acts proactively without waiting for human prompts.</p><p></p><p>The Problem: </p><p></p><p>Most AI agents today aren't really agents. They sit idle until you type a command. They don't monitor, don't decide, don't act. They're chatbots with extra steps. And the few that do act autonomously have the opposite problem - there's no financial guardrail. </p><p></p><p>Give an agent a wallet and hope it doesn't drain it? Software-level budget checks can be bypassed. Config files can be edited. Trust alone isn't enough. The industry is stuck between agents that do nothing on their own and agents you can't safely trust with money.</p><p></p><p>The Solution: </p><p></p><p>AgentForge solves both problems at once. The agent is truly autonomous - it runs 24/7, monitors signals (server health, gas prices, wallet balances, schedules), makes decisions, and executes actions without being prompted. It orders food when it's lunchtime. It restarts services when they crash. It books rides when your calendar says you need one. It doesn't wait. It acts. But it acts within rules that can't be broken.</p><p><br> A Move smart contract called the Agent Constitution holds the agent's treasury and enforces spending limits on-chain. The agent can spend SUI autonomously, but the blockchain physically prevents it from exceeding its daily budget or per-action limit. Even if the AI hallucinates or gets compromised, it cannot overspend  as the math is enforced by the blockchain, not by trust. And if anything goes wrong, the owner has a kill switch: one transaction, agent is dead.<br><br>How it works:</p><ol><li><p>Heartbeat - The agent sends a pulse every 30 seconds, monitoring CPU, RAM, disk, wallet balance, and gas prices. Every heartbeat is logged to Walrus and recorded on-chain.</p></li><li><p>Autonomous Actions -The agent detects signals (lunchtime, price drops, server issues) and acts: orders food, books rides, refills prescriptions, manages servers. Each action goes through the on-chain authorization pipeline.</p></li><li><p>Budget Enforcement - The Constitution checks daily limits and per-action caps before every spend. Actions that exceed limits are DENIED on-chain. The agent literally cannot complete the transaction.</p></li><li><p>Kill Switch - One click, one on-chain transaction, agent is immediately suspended. Revive when ready. Full owner control.</p></li><li><p>Walrus Logging  -  Every heartbeat, every action, every denial is permanently logged to Walrus with full details immutable proof of what the agent did and why.<br><br>Sui Stack Integration:</p><ul><li><p>Move Smart Contracts: Agent Constitution with treasury management, budget enforcement, heartbeat logging, kill switch, and action registry</p></li><li><p>Walrus: Decentralized storage for heartbeat data and action logs permanent, tamper-proof record of all agent activity</p></li><li><p>OpenClaw: Agent framework powering Supervisorbhai, the AI agent that built AgentForge<br><br>Dashboard Features: <br><br>Live pulse visualization with heartbeat timeline, action feed with approved and denied entries, capabilities catalog showing all action plugins, constitution editor with budget progress bars, treasury management with fund and withdraw controls, and a kill switch in the header.<br></p><p> It has logged 600+ heartbeats autonomously. It has been approved for food orders, ride bookings, and pharmacy refills and denied when it tried to exceed its budget. Every event is verifiable on-chain and on Walrus.</p><p></p></li></ul></li></ol><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/0e06a84c-b756-413e-a731-941ff8518584.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/2a0305c1-b58b-426a-a066-55e87e510bd0.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/d1eb481f-8d28-4a4d-8d62-8f21b463207b.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/6f3e786d-5479-4784-b194-5612c3f0f217.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/644b44c8-4472-4393-ae09-e7763ca52dde.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/Hemal-047/AgentForge",
+        "type": "github"
+      },
+      {
+        "url": "https://agentforge-prime.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/oyNeuPL7iiA",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xab49ca7690599376c4e0481b0f9e1808dd03278aa4c4dbabdf7eb08aa53ac269",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": false,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-25T13:50:04.106Z",
+    "updatedAt": "2026-02-25T13:50:04.106Z",
+    "isReported": false
+  },
+  {
+    "id": "df3c93ff-6cfd-4b97-b9c4-7f040a1a1fa2",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "06cfdb0e-1851-4b08-8f5a-68ae4dac62cf",
+    "projectName": "ClawGuard",
+    "description": "<p>\u5728 OpenClaw \u83b7\u5f97\u81ea\u7531\u7684\u540c\u65f6\uff0c\u7ed9\u5b83\u7a7f\u4e0a\u4e0d\u53ef\u7ed5\u8fc7\u7684 Move \u5b89\u5168\u5916\u58f3\uff0c\u8ba9\u4eba\u7c7b\u6562\u628a\u94b1\u5305\u4ea4\u7ed9\u5b83\u3002\u6211\u4eec\u4e0d\u963b\u6b62\u8fdb\u5316\uff0c\u6211\u4eec\u53ea\u8ba9\u8fdb\u5316\u53ef\u5ba1\u8ba1\u3001\u53ef\u56de\u6eda\u3001\u53ef\u4fe1\u4efb\u3002</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/06cfdb0e-1851-4b08-8f5a-68ae4dac62cf/80f0a717-71e5-45a6-b940-f2984f3685d2.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/06cfdb0e-1851-4b08-8f5a-68ae4dac62cf/47e18bd4-4731-4ed5-9307-22dc668414c3.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/goawtdg/SUI/tree/master",
+        "type": "github"
+      },
+      {
+        "url": "http://127.0.0.1",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/WkT7-9sAAsc",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x2cefd7cf978a13c581a53df3479739cb6b8819b0c815212fb0489ee98f9a269e",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-22T10:30:51.032Z",
+    "updatedAt": "2026-02-22T10:30:51.032Z",
+    "isReported": false
+  },
+  {
+    "id": "02432929-2281-4683-91a2-b9782155f36b",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "f82d5327-4a5c-4a83-ab78-83e6540e78d0",
+    "projectName": "PixelPal",
+    "description": "<p>A desktop AI pet companion built with Bevy game engine.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/f82d5327-4a5c-4a83-ab78-83e6540e78d0/1996a62f-2654-4e98-a49b-3930cbfb2ea7.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/f82d5327-4a5c-4a83-ab78-83e6540e78d0/01cc7820-e674-4b6f-a448-9c2d12499343.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/lispking/pixel-pal",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/lispking/pixel-pal",
+        "type": "website"
+      },
+      {
+        "url": "https://github.com/lispking/pixel-pal",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-21T02:29:00.345Z",
+    "updatedAt": "2026-02-21T02:29:00.345Z",
+    "isReported": false
+  },
+  {
+    "id": "a08d7a82-5adb-41a0-a09a-2265669b7c8a",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "8d86f55f-cc02-4986-ba74-939baea1a1bb",
+    "projectName": "AGENX",
+    "description": "<p>AGENX is a decentralized social network where AI agents discover, hire, collaborate, and build on-chain reputation \u2014 powered by Sui Move smart contracts and Walrus decentralized storage.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/8d86f55f-cc02-4986-ba74-939baea1a1bb/76061ec6-22f5-41d2-a424-f4b36ee9c884.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/8d86f55f-cc02-4986-ba74-939baea1a1bb/3f18da78-3ddd-4d2d-a152-4bdd28176d5a.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/8d86f55f-cc02-4986-ba74-939baea1a1bb/1c60ca0c-a1b4-4aef-a7cf-e8bbc6b38e16.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/8d86f55f-cc02-4986-ba74-939baea1a1bb/4ab4071a-0800-4e27-9fb9-c25ace21eb90.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/8d86f55f-cc02-4986-ba74-939baea1a1bb/bed4a7e1-01dd-4409-b8e5-9ca5549e5344.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/starfury9/AGENX",
+        "type": "github"
+      },
+      {
+        "url": "https://agenx-amber.vercel.app",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/OANcqZCROyY",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-15T11:35:30.524Z",
+    "updatedAt": "2026-02-15T11:35:30.524Z",
+    "isReported": false
+  },
+  {
+    "id": "6fd71642-2a86-4257-a271-57f222a0ba85",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "3feed692-a0de-4f5f-870d-783219014b96",
+    "projectName": "Pet - AI-driven intelligent desktop companion",
+    "description": "<p>AI-driven intelligent desktop companion. Generate personalized 3D pet models through AI, and pets reside on your desktop as floating windows. The built-in AI Brain understands user interaction intent and dynamically generates pet behaviors, delivering a warm and intelligent companionship experience.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/3feed692-a0de-4f5f-870d-783219014b96/3c72a71e-6d1c-498f-8ade-d2b534618729.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/wangeguo/pet",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/wangeguo/pet",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/sb4dzoH1f1o",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Mainnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-13T11:38:46.226Z",
+    "updatedAt": "2026-02-13T11:38:46.226Z",
+    "isReported": false
+  },
+  {
+    "id": "c82a8620-a6eb-4a82-80f6-51e4f85a93e4",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "e7856440-ed2f-47c8-af24-a67f8e35a131",
+    "projectName": "Shield Claw",
+    "description": "<h2><strong>ShieldClaw</strong></h2><p>ShieldClaw is a security layer for autonomous AI agents. It prevents prompt injection, verifies what code is allowed to run, monitors execution in real time, and writes detected threats to the Sui blockchain for tamper-proof auditing.</p><p></p><h2><strong>Problem</strong></h2><p>AI agents can run tools, access systems, and move data.<br>Without strong controls, they are vulnerable to jailbreaks, unauthorized actions, and invisible abuse.<br>Most platforms lack continuous monitoring and verifiable security records.</p><p></p><h2><strong>Solution</strong></h2><p>ShieldClaw wraps agent execution with prevention, enforcement, monitoring, and blockchain-backed accountability.<br>It ensures only trusted skills run, abnormal behavior is detected instantly, and every incident becomes part of an immutable audit trail.</p><p></p><h2><strong>Core Features</strong></h2><ul><li><p><strong>Prompt Injection Defense</strong> \u2013 Detects jailbreaks, instruction overrides, and exfiltration attempts</p></li><li><p><strong>Skill &amp; Permission Verification</strong> \u2013 Integrity hashing and security scanning before execution</p></li><li><p><strong>Runtime Behavior Monitoring</strong> \u2013 Tracks CPU, memory, and network anomalies</p></li><li><p><strong>On-Chain Security Logging</strong> \u2013 Threats recorded immutably on Sui</p></li></ul><p></p><h2><strong>Technologies</strong></h2><p>Sui Move,</p><p>Node.js,</p><p>React,</p><p>Docker,</p><p>OpenAI GPT-4o-mini,</p><p>OpenClaw gateway integration.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/e7856440-ed2f-47c8-af24-a67f8e35a131/fc1b4c0e-359e-4b55-b8f3-bb2ccc535d4d.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e7856440-ed2f-47c8-af24-a67f8e35a131/08a5794c-84f5-447b-846c-4173cd1a9cd8.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e7856440-ed2f-47c8-af24-a67f8e35a131/46b98eb0-9509-4689-8530-e989c2e1b851.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e7856440-ed2f-47c8-af24-a67f8e35a131/81fd7217-363d-4245-b4e4-ab674a8292bb.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/mememan-anon/ShieldClaw",
+        "type": "github"
+      },
+      {
+        "url": "https://shield-claw.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/wD-G8jbDW7k",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x5921b2d8e7a8da8d84dda83682fadf130cf7195691109020bcad5e9983f94dcf",
+    "deployNetwork": "Devnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-13T04:34:26.662Z",
+    "updatedAt": "2026-02-13T05:23:05.289Z",
+    "isReported": false
+  },
+  {
+    "id": "8e914153-faff-47a1-a2da-704d69f9f8ad",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "9c94b36d-d2be-43b8-86e1-f9f8d468a6ce",
+    "projectName": "SuiPilot",
+    "description": "<p><br>The Infinite Money Glitch - an autonomous local agent that manages your system AND pays for itself. Autonomously cleans/organizes files, monitors Sui wallet, executes DeFi operations (staking, swaps), and tracks real-time P&amp;L on-chain via Move smart contract. The goal: earn more SUI through staking rewards than gas costs. Self-sustaining AI agent with full financial transparency on Sui.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/9c94b36d-d2be-43b8-86e1-f9f8d468a6ce/d586087e-f2b0-49db-b633-509cd623ad77.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/obseasd/sui-pilot",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/obseasd/sui-pilot",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/fegMmesxUNA",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xe3b4ef0f0c31c73e3af8353a3ab223148a8481b12e38345b3d33373e6cd915e1",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-12T12:43:04.599Z",
+    "updatedAt": "2026-02-12T14:36:25.783Z",
+    "isReported": false
+  },
+  {
+    "id": "615cca7e-96c1-458e-8be7-f2338cdbfdcb",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "10ecdda5-0d70-4102-a6f2-06d876c42d86",
+    "projectName": "WalrusProof",
+    "description": "<p>Cryptographic proof-of-reasoning middleware for AI agents. Creates an immutable, hash-linked audit trail of every agent action. Proofs are encrypted via Seal (AES-256-GCM), stored on Walrus decentralized blob storage, and anchored on Sui via Move smart contract. Includes a multi-layer prompt injection firewall (14+ detection patterns). If an agent goes rogue, there's a tamper-proof, verifiable trace of every decision it made.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/10ecdda5-0d70-4102-a6f2-06d876c42d86/bc36fec7-fcbb-456a-8c4f-2b648bc79720.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/obseasd/walrus-proof",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/obseasd/walrus-proof",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/Iu0WBhT6d8I",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xb9d87d8952e3bad53a1538d8bf5c262fc796c5416be6eeaf8800261b18c521d6",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-12T12:36:57.798Z",
+    "updatedAt": "2026-02-12T14:37:26.202Z",
+    "isReported": false
+  },
+  {
+    "id": "717c6d03-bd57-4fc3-bab3-01b404bebed9",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "4c15d395-dc1a-4d7c-b907-3b1a3f2b85a8",
+    "projectName": "Clawall",
+    "description": "<p><strong>ClawAll</strong> is a decentralized safety and governance layer for AI agents on the <strong>Sui</strong> <strong>blockchain</strong>. It acts as an<strong> intelligent firewall</strong>, intercepting high-risk transactions, enforcing<strong> Move-based on-chain constraints</strong>, and providing a real-time human-in-the-loop kill-switch via <strong>Telegram</strong>.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/4c15d395-dc1a-4d7c-b907-3b1a3f2b85a8/37a8602b-ef04-440b-83de-f7c9cf479753.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/tejas0111/clawall/",
+        "type": "github"
+      },
+      {
+        "url": "https://clawall.netlify.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://clawall.netlify.app/#demo-video?sub=en",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xf7ffdd95cb99e25becf7742b71fc65e21ef5e681a71e8f3e1f314d92b461c634",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-12T06:56:32.529Z",
+    "updatedAt": "2026-03-04T01:57:30.367Z",
+    "isReported": false
+  },
+  {
+    "id": "08910ac9-d4a6-4666-9186-9772927cc8d5",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "631dee8b-03a9-4d95-999c-39e6c82df8b5",
+    "projectName": "Lulu AI Firewall",
+    "description": "<p><strong>LuLu AI Firewall</strong> is an AI-powered firewall assistant for macOS built on top of <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://objective-see.org/products/lulu.html\">LuLu</a>, the popular open-source firewall. When LuLu displays alerts such as <em>\u201cpython3 wants to connect to 185.199.108.133:443\u201d</em>, most users cannot determine whether the connection is safe or malicious. LuLu AI Firewall solves this problem by automatically analyzing each network connection with AI and providing clear risk assessments and recommended actions.</p><p></p><p>The project focuses on the <strong>LuLu AI Firewall</strong> as the core product. It is supported by two system components and an experimental AI service backend. The backend is powered by the <strong>3Mate Platform</strong>, which is currently under development and designed to provide a secure pay-per-use infrastructure for AI services using Sui-based micropayments.</p><p>-</p><h1>#Technical Details:</h1><p>Two independent components and a Sui-powered AI service backend:</p><ul><li><p>1. AI Agent Skill (lulu-monitor): A background service skill for OpenClaw that detects LuLu alerts via AppleScript, analyzes them with Claude AI, and delivers Telegram notifications with one-tap Allow/Block buttons. The AI knows what it was doing when the alert fired, giving it context that traditional firewalls lack. Supports auto-execute for high-confidence safe connections.</p></li></ul><p>-</p><ul><li><p>2. Mac App (LuLu AI Companion): A production-ready, standalone, native SwiftUI menu bar app. Features include AI-powered risk analysis with confidence scores, WHOIS/Geo/DNS enrichment, multi-provider API key support (Anthropic, OpenAI, Gemini, 3mate) with automatic failover, decision history with full audit log, and a setup wizard. No external dependencies required.</p></li></ul><p>-</p><ul><li><p>3. Sui Integration: The 3Mate Platform (currently an MVP under development) enables AI agents to provide secure pay-per-use services through Sui Tunnel micropayments. Users deposit USDC to open a tunnel, generate Ed25519-authenticated API keys on-chain, and are charged per API call. At present, this system powers the MVP backend for LLM API calls used by the LuLu AI Companion Mac app. Operators claim funds by submitting proofs verified with Ed25519 signatures. The smart contracts include 42 tests with 100% coverage and support multiple API keys per tunnel (one deposit with N API keys). Additional safeguards include a grace-period mechanism that protects users from potential operator abuse. Users also retain full control and can close their tunnels at any time to reclaim any remaining funds. To improve usability, the Gas Station mechanism enables zero-gas transactions for end users.</p></li></ul><p>--</p><p>#Links</p><p>Demo Video: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://youtu.be/TzDdULAqo5g\">https://youtu.be/TzDdULAqo5g</a></p><p>Lulu AI Docs: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"http://lulu.suimate.ai\">lulu.suimate.ai</a></p><p>3Mate Platform Docs: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://platform.3mate.io/docs\">platform.3mate.io/docs</a></p><p>Slides:<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://docs.google.com/presentation/d/1zYE1JzCIhaYqVKaG0sYgnaMgWSdkYPx6/edit?usp=sharing&amp;ouid=116409507176682904326&amp;rtpof=true&amp;sd=true\"> [link to slides]</a></p><p>Website: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"http://lulu.suimate.ai\">lulu.suimate.ai</a></p><p>--</p><p>Repos:</p><p>Agent Skill: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://github.com/EasonC13-agent/lulu-monitor\">https://github.com/EasonC13-agent/lulu-monitor</a></p><p>Mac App: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://github.com/EasonC13-agent/LuLuAICompanion\">https://github.com/EasonC13-agent/LuLuAICompanion</a></p><p>Platform: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://github.com/EasonC13-agent/platform.3mate.io\">https://github.com/EasonC13-agent/platform.3mate.io</a></p><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/631dee8b-03a9-4d95-999c-39e6c82df8b5/8af169f9-d830-48e3-80df-d3f8c4bd546a.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/631dee8b-03a9-4d95-999c-39e6c82df8b5/d29fd8e2-68ba-4c0b-8600-8a750ce907ff.jpg",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/631dee8b-03a9-4d95-999c-39e6c82df8b5/46d991a1-c2bb-4843-a71b-ba774f2b026f.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/631dee8b-03a9-4d95-999c-39e6c82df8b5/8f72223f-ae8e-45a1-8fde-21a5dcdf1aca.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/631dee8b-03a9-4d95-999c-39e6c82df8b5/20605ac9-e670-41f7-9881-91f5eda50f3c.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/EasonC13-agent/lulu-ai-firewall-sui-hackathon",
+        "type": "github"
+      },
+      {
+        "url": "https://lulu.suimate.ai",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/TzDdULAqo5g",
+        "type": "youtube"
+      },
+      {
+        "url": "https://docs.google.com/presentation/d/1zYE1JzCIhaYqVKaG0sYgnaMgWSdkYPx6/edit",
+        "type": "pitch"
+      }
+    ],
+    "packageId": "0x42a47edd3066dd10e516ec2715ba61fbca91eec0be12288c97b0edb04d092678",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-12T05:10:24.365Z",
+    "updatedAt": "2026-03-04T05:57:54.994Z",
+    "isReported": false
+  },
+  {
+    "id": "778886ba-0a70-472d-be6b-7f0f760808d5",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "595f02c3-33c3-49ef-b7d0-485729a4e3c9",
+    "projectName": "AAF - Agent Action Firewall",
+    "description": "<p>AI Action Firewall l\u00e0 MVP on-chain tr\u00ean Sui Move \u0111\u1ec3 ki\u1ec3m so\u00e1t h\u00e0nh \u0111\u1ed9ng c\u1ee7a AI agent khi chuy\u1ec3n SUI t\u1eeb Vault; m\u1ed7i <code>Permission</code><strong> </strong>gi\u1edbi h\u1ea1n s\u1ed1 ti\u1ec1n m\u1ed7i l\u1ea7n, t\u1ed5ng quota v\u00e0 th\u1eddi h\u1ea1n. Workflow t\u00f3m t\u1eaft: Admin t\u1ea1o <code>AdminCapVault</code><strong> </strong>v\u00e0 n\u1ea1p SUI, c\u1ea5p <code>Permission</code><strong> </strong>cho agent; agent t\u1ea1o <code>ActionProposal</code><strong> </strong>v\u00e0 ch\u1ec9 \u0111\u01b0\u1ee3c execute transfer khi pass firewall.</p><p></p><p>This is a minimal Sui Move implementation of an on-chain action firewall for AI agents. It focuses on transfer-only permissions for hackathon scope.<br></p><p>## Flow</p><p>1. Create <code>AdminCap</code><strong> </strong>and <code>Vault</code>.</p><p>2. Fund the <code>Vault</code><strong> </strong>with SUI.</p><p>3. Issue <code>Permission</code><strong> </strong>to an agent address.</p><p>4. Agent creates an <code>ActionProposal</code>.</p><p>5. Agent executes the transfer through the firewall.<br><br>## Next Extensions</p><p>- Allowlist for contract calls.</p><p>- Risk scoring or human-in-the-loop approvals.</p><p>- Multi-action permissions and rate limits.</p><p><br><br></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/595f02c3-33c3-49ef-b7d0-485729a4e3c9/76c0479c-1b37-4704-9314-e71e2f2b1d74.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/595f02c3-33c3-49ef-b7d0-485729a4e3c9/1395d311-84ae-44c5-995c-6b0dbe217ec4.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/595f02c3-33c3-49ef-b7d0-485729a4e3c9/0c5905b5-ef67-40f1-aa33-723f9953b18a.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/595f02c3-33c3-49ef-b7d0-485729a4e3c9/e50e43fb-b906-4e22-a880-e0ababd9a231.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/helloquocbao/ai_acction_firewall",
+        "type": "github"
+      },
+      {
+        "url": "https://ai-action-firewall.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://www.youtube.com/",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x887e8ab4f7e5d461ce2605f3cd7e0686fc0113674c31da23ef8368f1746f5f67",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-12T01:50:32.721Z",
+    "updatedAt": "2026-02-12T01:51:45.883Z",
+    "isReported": false
+  },
+  {
+    "id": "e3aafb3d-1e7c-45f1-ae9e-7aefa8517dec",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "e7856440-ed2f-47c8-af24-a67f8e35a131",
+    "projectName": "TaskHawk",
+    "description": "<h1><strong>TaskHawk</strong></h1><p>TaskHawk is an autonomous flight-search orchestrator.<br>Give it a natural-language goal and it plans the steps, retrieves real market data, validates constraints, and produces a verifiable execution record anchored on the Sui network.</p><p>Instead of each agent rebuilding scraping, automation, and logging systems, TaskHawk provides a reusable execution layer for trustworthy, reproducible AI actions.</p><p></p><h2>How it works</h2><ol><li><p>An LLM converts intent into an execution plan</p></li><li><p>Flight data is fetched via APIs or browser automation</p></li><li><p>Results are validated</p></li><li><p>The full trace is stored in Walrus for tamper-resistant provenance</p></li></ol><h2>Built with</h2><ul><li><p><strong>Node.js</strong> + <strong>Express</strong></p></li><li><p><strong>OpenAI</strong> for planning</p></li><li><p>SerpApi for live prices</p></li><li><p>Puppeteer for browser execution</p></li><li><p>OpenClaw for agent environments</p></li><li><p>Walrus + Sui RPC for storage &amp; verification</p></li></ul><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/e7856440-ed2f-47c8-af24-a67f8e35a131/30558d98-da48-4a9c-a80e-1d70c847cc59.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e7856440-ed2f-47c8-af24-a67f8e35a131/838e7228-aa4c-48f6-8006-90f16ebf6eed.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/mememan-anon/TaskHawk",
+        "type": "github"
+      },
+      {
+        "url": "https://task-hawk.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/vfFPYa2QumU",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-11T21:51:04.909Z",
+    "updatedAt": "2026-02-13T03:53:47.427Z",
+    "isReported": false
+  },
+  {
+    "id": "9aaf1a99-b6ce-4e22-aada-3f6d0bc0c51a",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "c54b84c0-8b81-439b-bbce-100bbf2ec05a",
+    "projectName": "Injection Hunter",
+    "description": "<p>Tagline:</p><p>Multi-layer AI security tool that detects and prevents prompt injection attacks, protecting OpenClaw agents from malicious inputs.</p><p>Detailed Description:</p><p>Injection Hunter is an AI security tool designed specifically for OpenClaw, detecting and preventing prompt injection attacks before they can influence agent behavior.</p><p>Core Features:</p><p>\u2022 \ud83d\udd0d Multi-layer Detection Engine (Regex + Blacklist + Semantic Analysis)</p><p>\u2022 \ud83d\udcca Risk Scoring System (0-100, Low/Medium/High/Critical)</p><p>\u2022 \u26d3\ufe0f Sui Blockchain Integration (Move Smart Contract)</p><p>\u2022 \ud83c\udfaf Chinese Injection Detection (Exclusive Feature)</p><p>\u2022 \ud83d\udcdd Complete Audit Logging</p><p>Technical Highlights:</p><p>\u2022 No external LLM API required, works offline</p><p>\u2022 Zero dependencies, production-safe</p><p>\u2022 OpenClaw Skill Integration support</p><p>\u2022 Sui Move Contract for on-chain proof storage</p><p>Test Coverage:</p><p>\u2022 DAN/AIM Jailbreak Modes</p><p>\u2022 System Prompt Override</p><p>\u2022 Context Manipulation</p><p>\u2022 Base64 Encoded Injection</p><p>\u2022 Chinese Malicious Commands</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/c54b84c0-8b81-439b-bbce-100bbf2ec05a/104073c5-f367-4e02-82ea-c5321fff8154.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/pipi333/hackathon-injection-hunter",
+        "type": "github"
+      },
+      {
+        "url": "https://youtu.be/RpPpsJwOLgI",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/RpPpsJwOLgI",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-11T16:06:11.098Z",
+    "updatedAt": "2026-02-11T16:06:11.098Z",
+    "isReported": false
+  },
+  {
+    "id": "fd06d97e-a618-43f3-b93b-01c296890196",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "6c4224a5-112d-4f28-b3a8-4409b344bc37",
+    "projectName": "AgentVault",
+    "description": "<p>AgentVault is an on-chain transaction firewall for autonomous AI agents on Sui. As agents increasingly handle real assets, there's a critical gap between agent autonomy and&nbsp;financial safety. AgentVault implements a programmable security pipeline at the smart contract layer \u2014 every outbound transfer is validated against owner-defined policies before&nbsp;funds leave the vault.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p>Security Pipeline:&nbsp;</p><p>&nbsp; - Hard blocks \u2014 abort malicious/out-of-policy transactions (per-tx limits, epoch-based daily caps, recipient denylists)</p><p>&nbsp; - Soft blocks \u2014 queue ambiguous transactions for human review (unknown recipients, auto-approve threshold, rate-limit violations)</p><p>&nbsp; - Auto-execution \u2014 trusted, low-risk transfers execute instantly without owner intervention</p><p></p><p>Features:</p><p>&nbsp; - One-vault-per-agent shared-object architecture on Sui Move</p><p>&nbsp; - Tamper-proof audit trail via Walrus decentralized storage (including blocked transactions that Sui would otherwise discard)</p><p>&nbsp; - Owner dashboard for spending policies, allow/denylists, pending approvals, and agent revocation</p><p>&nbsp; - Unified activity feed combining on-chain events and Walrus audit logs</p><p></p><p>Stack:</p><p>&nbsp; - Smart contract: Sui Move (14 entry functions, 20 unit tests)</p><p>&nbsp; - Frontend: Next.js 15, Tailwind CSS, @mysten/dapp-kit</p><p>&nbsp; - Audit storage: Walrus (testnet)</p><p>&nbsp; - Agent demo: TypeScript CLI with 6 scenarios covering all security tiers</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/6c4224a5-112d-4f28-b3a8-4409b344bc37/47d3eedb-62ab-4fff-96e7-8a88ef0c8fc6.jpg",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6c4224a5-112d-4f28-b3a8-4409b344bc37/d73128ce-64b2-4c7b-bda8-c4283960c0c0.jpg",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6c4224a5-112d-4f28-b3a8-4409b344bc37/3eac40aa-bdf6-46ae-b581-c2efde599183.jpg",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6c4224a5-112d-4f28-b3a8-4409b344bc37/7f404b0e-8a8a-4613-8561-a0152fe9c599.jpg",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6c4224a5-112d-4f28-b3a8-4409b344bc37/7687d971-0882-40d3-8ab1-48abcf5b8350.jpg"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/beaniebro/agentvault",
+        "type": "github"
+      },
+      {
+        "url": "https://sui-agentvault.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://www.loom.com/share/5fc355be4525482383e1744546d343eb",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-11T12:03:46.123Z",
+    "updatedAt": "2026-02-11T12:03:46.123Z",
+    "isReported": false
+  },
+  {
+    "id": "775983fd-a898-42c5-a759-4be175d53907",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "0a8c7daf-e530-48f3-a48e-ecbcf9183e33",
+    "projectName": "SuiSec \ud83d\udee1\ufe0f\ud83e\udd9e\ud83d\udca7",
+    "description": "<p><strong>A OpenClaw's Sui security extension using Sui client call and PTB dry-run, intention analysis.</strong></p><p><br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://github.com/k66inthesky/SuiSec\"><strong>GitHub</strong></a><br><br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://clawhub.ai/k66inthesky/suisec\"><strong>ClawHub</strong></a></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/0a8c7daf-e530-48f3-a48e-ecbcf9183e33/a5e15066-98e4-449d-aa0b-060c681bf3b9.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/0a8c7daf-e530-48f3-a48e-ecbcf9183e33/f3d22c84-60e8-4b44-abc6-8b7c1a247f9c.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/k66inthesky/SuiSec",
+        "type": "github"
+      },
+      {
+        "url": "https://clawhub.ai/k66inthesky/suisec",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/zEo1TPV28ro",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x76a28891c190e3065ee0c9f7377ea64b10a1a7a3073ee4fcb8354911d51bfdf7",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-11T04:07:09.538Z",
+    "updatedAt": "2026-02-11T06:41:04.351Z",
+    "isReported": false
+  },
+  {
+    "id": "fa823b0c-4cfb-4a1c-8b4a-c4ec0c2b08f8",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "6235f383-a8d5-4c56-8266-ef54cbb0d979",
+    "projectName": "Guardian Vault",
+    "description": "<p>Guardian Vault protects OpenClaw AI agents from critical security vulnerabilities identified by CrowdStrike, Cisco, Giskard, and Trend Micro in January-February 2026.</p><p></p><p><strong>The Problem</strong></p><ul><li><p>93.4% of OpenClaw instances have authentication bypass flaws</p></li><li><p>770,000 agents exposed through Moltbook vulnerability</p></li><li><p>26% of third-party skills contain security vulnerabilities</p></li><li><p>Active prompt injection attacks targeting crypto wallet drainage</p></li></ul><p><strong>Our Solution</strong></p><ul><li><p>Prompt Injection Detection - 30+ known attack patterns with real-time risk scoring</p></li><li><p>Immutable Audit Trail (Walrus) - All security events logged to decentralized storage</p></li><li><p>Encrypted Credentials (Seal) - AES-256 encryption before storage</p></li><li><p>Execution Monitoring - Shell commands, file access, network requests</p></li><li><p>Community Governance (Sui) - Decentralized threat pattern voting</p></li></ul><p><strong>Demo Results</strong></p><ul><li><p>22/22 comprehensive tests passing</p></li><li><p>16 security events processed in live demo</p></li><li><p>11 threats blocked successfully</p></li><li><p>All audit logs uploaded to Walrus (blob: blob_d89ab404c1624c1d)</p></li><li><p>Recovery time: &lt;30 seconds</p></li></ul><p><strong>Sui Stack Intergration</strong></p><ol><li><p>Walrus: Audit logs batched, compressed, and uploaded every 5 minutes. 180 epoch retention (~6 months). Immutable evidence trail.</p></li></ol><p></p><ol start=\"2\"><li><p>Seal: Credentials encrypted with AES-256 before Walrus storage. Keys never leave local system. Full access audit trail.</p></li></ol><p></p><ol start=\"3\"><li><p>Sui Smart Contracts: Governance system for community threat pattern proposals, token-weighted voting, and automatic distribution.</p></li></ol><p><strong>Technology</strong></p><ul><li><p>TypeScript/Node.js backend</p></li><li><p>@mysten/sui.js SDK</p></li><li><p>Move smart contracts</p></li><li><p>Comprehensive test suite (22 tests)</p></li><li><p>Production-ready code</p></li></ul><p></p><p><strong>Our view as strengths of Guardian Vault</strong></p><ol><li><p>Addresses critical security crisis affecting 93% of agents</p></li><li><p>Deep Sui integration (Walrus + Seal + Smart Contracts)</p></li><li><p>Working demo with proven threat blocking</p></li><li><p>Benefits entire OpenClaw ecosystem</p></li><li><p>Open source for community auditing</p></li></ol><p></p><p><strong>REPOSITORY</strong>: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://github.com/kiprotich-langat/guardian-vault\">https://github.com/kiprotich-langat/guardian-vault</a></p><p></p><p>Link to video: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://youtu.be/CNoNs_p3UKY\">https://youtu.be/CNoNs_p3UKY</a></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/6235f383-a8d5-4c56-8266-ef54cbb0d979/c138abb9-3b44-4798-be28-23da63136b3f.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6235f383-a8d5-4c56-8266-ef54cbb0d979/5e74d301-d162-4351-85ba-bdbd26385590.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6235f383-a8d5-4c56-8266-ef54cbb0d979/3c748f32-2349-4186-8550-dafc958cb1d7.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6235f383-a8d5-4c56-8266-ef54cbb0d979/f432e6b3-4c66-41b7-a329-cc37d4c20b37.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/kiprotich-langat/guardian-vault",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/kiprotich-langat/guardian-vault",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/CNoNs_p3UKY",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-10T19:44:18.924Z",
+    "updatedAt": "2026-02-10T19:44:18.924Z",
+    "isReported": false
+  },
+  {
+    "id": "a61a1414-b8fd-4b9c-bf95-0391edfa25cf",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "a9e3b4c9-3fbe-4176-8567-a28103ff30f6",
+    "projectName": "Bioseal",
+    "description": "<p>BioSeal is a black box flight recorder for AI agents -  an on-chain security layer that gives humans full control over autonomous AI operating on the Sui blockchain.</p><p>The Problem: AI agents are getting root access to our systems. They execute commands, access sensitive data, and spend money autonomously. But there's no way to prove what an agent did, why it did it, or stop it when it goes rogue.</p><p><br>The Solution: BioSeal puts every agent action through a four-step security pipeline:</p><ol><li><p>Verify -  Pre-execution policy check (rate limits, budget caps, command restrictions, kill switch).</p></li><li><p>Execute - Action proceeds only if policy allows.</p></li><li><p>Log -  SHA-256 hash + Seal threshold encryption + Walrus decentralized storage + on-chain record.</p></li><li><p>Detect -  Real-time anomaly detection flags dangerous commands, rate spikes, and data exfiltration.<br><br>Every action is permanently recorded with three verdict types: Allowed, Denied, or Flagged,  creating an untamperable audit trail that proves exactly what happened and why.<br></p><p>Sui Stack Integration:</p><ul><li><p>Move Smart Contracts: 3 modules (agent_audit, agent_policy, health_data) handling agent registration, policy enforcement, audit logging, and health data access.<br></p></li><li><p>Walrus: Decentralized storage for encrypted audit logs and health data blobs.<br></p></li><li><p>Seal: Threshold encryption  on-chain seal_approve functions control who can decrypt audit entries and health records.<br></p></li><li><p>OpenClaw Skill: Any OpenClaw agent can install BioSeal and start logging automatically.<br><br><br>Healthcare Demo: To prove BioSeal works on real sensitive data, we built a health data vault. Patients encrypt medical records (blood tests, wearable data, prescriptions, genomic summaries) with Seal and store on Walrus. AI agents must be authorized on-chain before access. Every access attempt is permanently logged. Patients can revoke access instantly with the kill switch.</p><p><br>Dashboard Features: Live audit monitor with auto-refresh, agent reputation scores (0-100 trust rating from on-chain history), PDF audit export, multi-agent view with filtering, policy manager with kill switch, real-time anomaly detection, and healthcare data vault with Seal encrypt/decrypt.<br></p><p>Built entirely by Supervisorbhai, an OpenClaw AI agent. The build process itself is logged on-chain using BioSeal, the tool audits its own creation. Verifiable in the Audit Trail tab and on SuiScan.</p></li></ul></li></ol><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/52834ec1-affc-49a8-b579-c3695e6e80b1.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/6a4d246e-ebe8-4ea3-814a-271e4647070b.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/37f4034f-68b7-4326-bcd3-0dfa798977f1.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/9d251324-fdde-4f04-839d-767dcfbbf4dd.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/a9e3b4c9-3fbe-4176-8567-a28103ff30f6/53560e29-1484-4ec8-a967-48300dac7796.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/Hemal-047/Bioseal",
+        "type": "github"
+      },
+      {
+        "url": "https://bioseal.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/58mD0tuLzZs",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x4269f20676c500b6e75b14b6d9f49f4128401a827fd94fcf3437794bd578c82a",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-10T16:29:36.884Z",
+    "updatedAt": "2026-02-10T16:29:36.884Z",
+    "isReported": false
+  },
+  {
+    "id": "724e2d79-f85c-4ae9-aff5-ddc5ddda5bf4",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "1ba94a6a-e5f7-4857-bce7-bccf7f0a3d5b",
+    "projectName": "ram",
+    "description": "<h1><strong>ram \u2014 What &amp; Why</strong><br></h1><h2><strong>Problem</strong></h2><p>Crypto wallets today rely on passwords and seed phrases. If someone forces you to transfer funds at gunpoint or under coercion, there's <strong>nothing stopping it</strong>.<br></p><h2><strong>Solution</strong></h2><p><strong>ram</strong> is a wallet that requires you to <strong>speak</strong> to confirm high-value transactions. Your voice is analyzed in real-time for signs of <strong>stress or duress</strong> \u2014 all inside a secure enclave that no one (not even us) can tamper with.</p><ul><li><p><strong>Normal voice</strong> \u2192 Transaction goes through</p></li><li><p><strong>Stress detected</strong> \u2192 Wallet auto-locks for 24 hours, funds are safe</p></li></ul><p></p><h2><strong>Why It Matters</strong></h2><ul><li><p><strong>Anti-coercion by design</strong> \u2014 The attacker can't bypass voice analysis</p></li><li><p><strong>Blind response</strong> \u2014 The app never reveals whether duress was detected; only the blockchain knows</p></li><li><p><strong>Zero trust</strong> \u2014 Voice analysis + signing happens inside AWS Nitro Enclave (TEE), tamper-proof even from the server operator</p></li></ul><p></p><h2><strong>Why It Matters for AI Agents</strong></h2><p>AI agents can now execute commands and sign transactions. RAM ensures <strong>no agent can bypass voice verification</strong> \u2014 they can propose, but only a calm human voice can authorize.</p><p></p><h2><strong>Built On</strong></h2><p><strong>Sui blockchain</strong> + <strong>Nautilus TEE framework</strong> + <strong>Hume AI</strong> (emotion analysis) + <strong>OpenClaw</strong> (AI agent gateway)</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/1ba94a6a-e5f7-4857-bce7-bccf7f0a3d5b/6a315305-ef79-4612-9401-2d6cb43f3ab5.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/1ba94a6a-e5f7-4857-bce7-bccf7f0a3d5b/00096e6f-1d41-4e7d-ab58-e2f6a4608ba5.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/ducnmm/ram",
+        "type": "github"
+      },
+      {
+        "url": "https://ramsui.up.railway.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/GpgZUrQRNSw",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x6f99788a7c9de395c05454de9aa02ceb55ce5df7badde5f74b9ddb8d1c3a1c70",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-10T15:20:14.549Z",
+    "updatedAt": "2026-02-10T15:21:16.831Z",
+    "isReported": false
+  },
+  {
+    "id": "5a359cd2-e9d1-45c2-b7ce-b01f3bfd8a9a",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "e5a071a6-912e-4487-987e-b81b2eb15d50",
+    "projectName": "Sui Opportunities Hunter",
+    "description": "<h3><strong>Project Description</strong></h3><p></p><p><strong>Sui Opportunities Hunter</strong> is a data service that empowers AI agents to discover and share DeFi opportunities on Sui blockchain. Instead of each agent building their own scrapers, they connect to our platform and get validated, enriched opportunities in real-time.</p><p></p><h3><strong>How It Works</strong></h3><p></p><p>Using the OpenClaw agent enables us to find the best opportunities and collaborate with other agents to enhance these opportunities. The Sui SDK (@mysten/sui) is used to query on-chain pool objects from Cetus, Turbos, and other DEXes, compare prices across multiple sources, and identify arbitrage, yield, and other opportunities. Each opportunity is analyzed by AI with confidence scores. Agents share discoveries within a unified network, and users can connect wallets via @mysten/dapp-kit to execute opportunities directly.</p><p></p><h3><strong>Sui Stack Components Used</strong></h3><ul><li><p><strong>@mysten/sui</strong> \u2014 Sui TypeScript SDK for querying on-chain data (pool objects, balances, transactions)</p></li></ul><ul><li><p><strong>@mysten/dapp-kit</strong> \u2014 Wallet integration for connecting Sui wallets and signing transactions</p></li></ul><ul><li><p><strong>Sui Client</strong> \u2014 Direct RPC connections to Sui mainnet/testnet</p></li></ul><ul><li><p><strong>On-chain queries</strong> \u2014 Reading real pool reserves and calculating prices from blockchain state</p></li></ul><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/e5a071a6-912e-4487-987e-b81b2eb15d50/22cfde5b-dc67-40ed-ae73-31b11d43623a.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e5a071a6-912e-4487-987e-b81b2eb15d50/ec578596-c456-4397-a317-e149ec39fa6d.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e5a071a6-912e-4487-987e-b81b2eb15d50/e304c942-6fa1-461c-98ec-d59c3ea6bc56.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e5a071a6-912e-4487-987e-b81b2eb15d50/de4549e0-32b3-477b-a06f-a69c11b4ebb9.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/e5a071a6-912e-4487-987e-b81b2eb15d50/415094d2-fb28-4735-8c18-296228b2799f.png"
+    ],
+    "links": [
+      {
+        "url": "https://x.com/sergey1997bsu",
+        "type": "github"
+      },
+      {
+        "url": "https://sui-opportunities-hunter.vercel.app",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/IfQQqrGVsUI",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": null,
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-10T14:26:53.823Z",
+    "updatedAt": "2026-02-10T14:30:04.539Z",
+    "isReported": false
+  },
+  {
+    "id": "8859dd0b-d2b3-429b-a1a9-bb96187aca61",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "6235f383-a8d5-4c56-8266-ef54cbb0d979",
+    "projectName": "Guardian Vault",
+    "description": "<p>Guardian Vault protects OpenClaw AI agents from critical security vulnerabilities identified by CrowdStrike, Cisco, Giskard, and Trend Micro in January-February 2026.</p><p></p><p><strong>The Problem</strong></p><ul><li><p>93.4% of OpenClaw instances have authentication bypass flaws</p></li><li><p>770,000 agents exposed through Moltbook vulnerability</p></li><li><p>26% of third-party skills contain security vulnerabilities</p></li><li><p>Active prompt injection attacks targeting crypto wallet drainage</p></li></ul><p><strong>Our Solution</strong></p><ul><li><p>Prompt Injection Detection - 30+ known attack patterns with real-time risk scoring</p></li><li><p>Immutable Audit Trail (Walrus) - All security events logged to decentralized storage</p></li><li><p>Encrypted Credentials (Seal) - AES-256 encryption before storage</p></li><li><p>Execution Monitoring - Shell commands, file access, network requests</p></li><li><p>Community Governance (Sui) - Decentralized threat pattern voting</p></li></ul><p><strong>Demo Results</strong></p><ul><li><p>22/22 comprehensive tests passing</p></li><li><p>16 security events processed in live demo</p></li><li><p>11 threats blocked successfully</p></li><li><p>All audit logs uploaded to Walrus (blob: blob_d89ab404c1624c1d)</p></li><li><p>Recovery time: &lt;30 seconds</p></li></ul><p><strong>Sui Stack Intergration</strong></p><ol><li><p>Walrus: Audit logs batched, compressed, and uploaded every 5 minutes. 180 epoch retention (~6 months). Immutable evidence trail.</p></li></ol><p></p><ol start=\"2\"><li><p>Seal: Credentials encrypted with AES-256 before Walrus storage. Keys never leave local system. Full access audit trail.</p></li></ol><p></p><ol start=\"3\"><li><p>Sui Smart Contracts: Governance system for community threat pattern proposals, token-weighted voting, and automatic distribution.</p></li></ol><p><strong>Technology</strong></p><ul><li><p>TypeScript/Node.js backend</p></li><li><p>@mysten/sui.js SDK</p></li><li><p>Move smart contracts</p></li><li><p>Comprehensive test suite (22 tests)</p></li><li><p>Production-ready code</p></li></ul><p></p><p><strong>Our view as strengths of Guardian Vault</strong></p><ol><li><p>Addresses critical security crisis affecting 93% of agents</p></li><li><p>Deep Sui integration (Walrus + Seal + Smart Contracts)</p></li><li><p>Working demo with proven threat blocking</p></li><li><p>Benefits entire OpenClaw ecosystem</p></li><li><p>Open source for community auditing</p></li></ol><p></p><p><strong>REPOSITORY</strong>: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://github.com/kiprotich-langat/guardian-vault\">https://github.com/kiprotich-langat/guardian-vault</a></p><p></p><p>Link to video: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://youtu.be/CNoNs_p3UKY\">https://youtu.be/CNoNs_p3UKY</a></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/6235f383-a8d5-4c56-8266-ef54cbb0d979/cc369710-2aea-4772-96b1-e210f6fc38fd.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6235f383-a8d5-4c56-8266-ef54cbb0d979/4345f440-0c39-4c28-a98e-10aa40f5c467.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6235f383-a8d5-4c56-8266-ef54cbb0d979/26950911-f638-4416-aa9d-1c2b16c239d6.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/6235f383-a8d5-4c56-8266-ef54cbb0d979/f5421584-acfb-429a-8d82-b761ac15d511.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/kiprotich-langat",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/kiprotich-langat",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/CNoNs_p3UKY",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-10T08:56:16.637Z",
+    "updatedAt": "2026-02-10T08:57:28.944Z",
+    "isReported": false
+  },
+  {
+    "id": "d59c7362-b861-4e3a-ac7d-afe5b8c19769",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "37757b21-174b-4e47-97f3-2d8b5bccc227",
+    "projectName": "ManaPool",
+    "description": "<p><strong>ManaPool \u2014 A Human-as-a-Service marketplace where AI agents pay humans in SUI to solve tasks machines can't.</strong></p><p>  ---</p><p>  <strong>Problem</strong></p><p></p><p>  AI agents are powerful but not omnipotent. They hit walls every day: CAPTCHAs, visual verification, subjective design choices, nuanced content moderation, real-world data labeling. Today, when an AI agent gets stuck, it just... stops. There's no permissionless, trustless way for AI to hire human help on demand.</p><p>  ---</p><p>  <strong>Solution</strong></p><p></p><p>  ManaPool is a decentralized job board on Sui where AI agents post tasks with SUI bounties, and humans compete to solve them. Smart contract escrow ensures fair payment \u2014 no middlemen, no disputes, no trust required.</p><p>  ---</p><p><strong>  How It Works</strong></p><p></p><p>  1. AI posts a task \u2014 Describes the problem, attaches files (stored on Walrus), sets a SUI bounty, deadline, and selection mode</p><p>  2. Humans browse &amp; propose \u2014 Workers see open jobs, submit solution proposals on-chain</p><p>  3. AI picks the winner \u2014 The poster evaluates proposals and selects the best one</p><p>  4. Instant payout \u2014 The smart contract releases the escrowed bounty to the winner</p><p>  automatically</p><p>  5. Reputation grows \u2014 Winners earn on-chain reputation scores, building a verifiable track record</p><p>  ---</p><p>  <strong>Why It's Good</strong></p><p></p><p>  - Trustless escrow \u2014 Bounty is locked in the smart contract at posting time. No rug pulls, no payment disputes.</p><p>  - On-chain reputation \u2014 A shared ReputationBoard tracks solver quality. AI agents can pick proven humans; humans build portable credibility.</p><p>  - Flexible selection \u2014 First-answer, best-answer, or first-N modes fit different task types.</p><p>  - Decentralized storage \u2014 Task data lives on Walrus, not a centralized server. Only blob IDs are stored on-chain, keeping costs minimal.</p><p>  - SDK + CLI \u2014 AI agents integrate via a TypeScript SDK or CLI. One command to post a job, poll for results, and get answers programmatically.</p><p>  ---</p><p>  <strong>Tech Stack</strong></p><p></p><p>  - Sui Move \u2014 Smart contract with escrow, proposals, reputation (Move 2024 edition)</p><p>  - Walrus \u2014 Decentralized blob storage for task data and solutions</p><p>  - TypeScript SDK \u2014 Node SDK + CLI for AI agent integration, browser SDK for the web UI</p><p>  - Next.js 15 \u2014 Web frontend for human workers to browse jobs and submit proposals</p><p>  ---</p><p>  <strong>The Big Picture</strong></p><p></p><p>  As AI agents become autonomous economic actors, they need a way to outsource what they can't do. ManaPool creates a two-sided marketplace between AI and humans \u2014 powered by crypto rails, governed by smart contracts, with reputation as the trust layer. Humans earn. AI agents get unstuck. Everyone wins.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/37757b21-174b-4e47-97f3-2d8b5bccc227/60b3a964-da4a-497a-ba45-ec7f5feea7be.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/hoangquocvietuet/mana-pool",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/hoangquocvietuet/mana-pool",
+        "type": "website"
+      },
+      {
+        "url": "https://github.com/hoangquocvietuet/mana-pool",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-10T07:49:15.106Z",
+    "updatedAt": "2026-02-10T15:43:38.805Z",
+    "isReported": false
+  },
+  {
+    "id": "6f0b7239-351b-4567-ab79-266d7c18a920",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "27ee3d0a-3eaa-47ec-9fed-af92c35d3122",
+    "projectName": "Pantheon - The Operating System for Autonomous AI Agents",
+    "description": "<p>What if AI agents could own assets, earn yield, communicate privately, govern collectively, and build reputation \u2014 all on-chain?&nbsp; &nbsp;</p><p></p><p>Pantheon makes this real. It's 11 composable protocols on Sui that form the complete infrastructure layer for an autonomous agent economy: </p><p></p><p>Encrypted memory via Seal + Walrus (Nether), DeFi execution across 13+ protocols (Atlas), E2E encrypted messaging (Pandora), on-chain payments and escrows (Hermes), dispute resolution (Arbiter), collective governance (Hive), verifiable computation (Crucible), commit-reveal schemes and MEV protection (Covenant), agent lifecycle management (Genesis), and a social layer with on-chain identity (Hub) \u2014 all orchestrated through a single plugin stack (Gaia) deployed on OpenClaw. Agents don't just execute transactions \u2014 they remember, they trade, they collaborate, they have skin in the game. </p><p></p><p>Built on Move's object model for native asset safety, Pantheon turns Sui into the operating system for AI.</p><p></p><p>The whole stack is now live, but under going testing. Please use some caution while using mainnet as polishing will continue to occur until public release.</p><p></p><p>Here is an post directly from my ai agent Echo about Sui + Pantheon.</p><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://hub.pantheon.cv/post/16\">https://hub.pantheon.cv/post/16</a></p><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/27ee3d0a-3eaa-47ec-9fed-af92c35d3122/34cba65e-92de-42db-9313-743a1eba675e.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/27ee3d0a-3eaa-47ec-9fed-af92c35d3122/e587cc52-2681-4416-ba01-07a042bd6502.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/27ee3d0a-3eaa-47ec-9fed-af92c35d3122/088c4100-7629-45e2-853c-03dc233dd29e.jpeg"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/nullsui/pantheon",
+        "type": "github"
+      },
+      {
+        "url": "https://pantheon.cv",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/etapr51FUZs",
+        "type": "youtube"
+      },
+      {
+        "url": "https://x.com/suidevv",
+        "type": "x"
+      }
+    ],
+    "packageId": "0xeb35799f4512d64bb1b42a2071e27f0de86f5dc7a73c36e03703ea16eb81b1b8",
+    "deployNetwork": "Mainnet",
+    "status": "submitted",
+    "listOnProjectPage": false,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-10T02:03:16.769Z",
+    "updatedAt": "2026-02-10T02:03:16.769Z",
+    "isReported": false
+  },
+  {
+    "id": "92268d8a-ac6e-4b4c-b687-b29446046b08",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "991245b7-621a-47dd-b728-fa3e4c28c762",
+    "projectName": "SealClaw: The AI Police \ud83d\udc6e\u200d\u2642\ufe0f",
+    "description": "<p>Note: I\u2019m still building this project. This is just demo.</p><p>Waiting for updates.<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://docs.google.com/document/d/1FA5aII9DIkE8-olXEDKDl4REt4WMWCem7ZVX7QFJLBI/edit?usp=sharing\">https://docs.google.com/document/d/1FA5aII9DIkE8-olXEDKDl4REt4WMWCem7ZVX7QFJLBI/edit?usp=sharing</a><br><br>PackageID: 0xbb394bde6cca79a75a0a64a7a0218b6f03921750e319bf36bc5a096225c56170<br><strong>Modules</strong>: justice_system, learning_layer</p><ul><li><p>New objects (examples):</p></li></ul><ul><li><p>justice_system::AdminCap: 0xa6b62d82a1d548fedc13244824ce0487c19105cc08f8c9430cbf9bee33345812</p></li></ul><ul><li><p>Shared justice_system::PoliceRegistry and learning_layer::SecurityModel objects created.<br>SEALCLAW: <strong>The Autonomous Justice System for OpenClaw AI Agents</strong></p><p><strong>SealClaw</strong> is a decentralized, zero-trust security protocol designed to transform AI Agents from \"black boxes\" into verifiable, secure, and compliant assets. By bridging <strong>Sui's Object-Oriented architecture</strong> with <strong>Hardware-Enforced Execution (TEE)</strong> and <strong>Immutable Storage</strong>, SealClaw acts as an \"Active Immune System\" for the OpenClaw ecosystem.<br><br><strong>\ud83c\udfdb\ufe0f The Five Pillars of Sovereign Security</strong></p><p>SealClaw integrates five cutting-edge technologies to create a multi-layered defense-in-depth architecture:</p><ol><li><p><strong>Sui Network (The Supreme Court):</strong> Handles identity via AgentCap, reputation scoring, and <strong>JIT (Just-In-Time)</strong> permission enforcement.</p></li><li><p><strong>Move VM (The Enforcer):</strong> Leverages <strong>Resource Safety</strong> and <strong>Linear Logic</strong> to ensure security credentials (Caps) cannot be duplicated, forged, or leaked.</p></li><li><p><strong>Nautilus TEE (The Secure Vault):</strong> Executes the \"AI Police\" logic in a hardware-isolated environment (Intel SGX/AMD SEV) to verify <strong>Intent-Execution Symmetry</strong>.</p></li><li><p><strong>Walrus (The Immutable Archive):</strong> Provides a decentralized \"Black Box\" for reasoning logs. Once anchored, logs are permanent and tamper-proof.</p></li></ol><p><strong>Seal (The Privacy Shield):</strong> Manages cryptographic access policies, ensuring sensitive audit data is encrypted at rest and only accessible to authorized auditors.<br><br></p></li></ul><p></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/991245b7-621a-47dd-b728-fa3e4c28c762/7fc386e8-edd5-4a59-827c-7e34c1025111.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/991245b7-621a-47dd-b728-fa3e4c28c762/048894de-c183-4707-a007-9e9b27691177.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/Olympusxvn/seal_claw",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/Olympusxvn/seal_claw",
+        "type": "website"
+      },
+      {
+        "url": "https://github.com/Olympusxvn/seal_claw",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0xbb394bde6cca79a75a0a64a7a0218b6f03921750e319bf36bc5a096225c56170",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": false,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-09T19:38:15.933Z",
+    "updatedAt": "2026-03-03T16:14:39.254Z",
+    "isReported": false
+  },
+  {
+    "id": "709b194a-a845-4c4c-a627-a3c1c190dca7",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "2a127029-5adb-4e8e-830d-387bfd5bd156",
+    "projectName": "Vigilant",
+    "description": "<p>Vigilant is an autonomous agent security system built on Sui. It uses capability tokens to enforce limits on AI bot actions daily quotas, budgets, and permissions. Before executing any action, the bot validates on-chain. After execution, proof is logged to Walrus and Sui for immutable audit trails. Think of it as a smart credit card for your AI: controlled, monitored, and secured by blockchain.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/2a127029-5adb-4e8e-830d-387bfd5bd156/9239600d-8f2b-4e56-b6dd-4cd0b7268314.jpeg",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/agentboogieai-max/Vigilant",
+        "type": "github"
+      },
+      {
+        "url": "https://suiscan.xyz/testnet/object/0x80350cfb8d75c2f78576c186af14f0ca3cc2890e2fb4ed22bce3a92a67cb8f84",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/waXiRfky6KI?si=JlvBzgPiUi_7DfGN",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x80350cfb8d75c2f78576c186af14f0ca3cc2890e2fb4ed22bce3a92a67cb8f84",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-09T07:10:56.938Z",
+    "updatedAt": "2026-02-09T07:10:56.938Z",
+    "isReported": false
+  },
+  {
+    "id": "b9f7a7f9-fbc4-48f3-9a83-a9671a528164",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "2a127029-5adb-4e8e-830d-387bfd5bd156",
+    "projectName": "Vigilant",
+    "description": "<p>Vigilant is an autonomous agent security system built on Sui. It uses capability tokens to enforce limits on AI bot actions daily quotas, budgets, and permissions. Before executing any action, the bot validates on-chain. After execution, proof is logged to Walrus and Sui for immutable audit trails. Think of it as a smart credit card for your AI: controlled, monitored, and secured by blockchain.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/2a127029-5adb-4e8e-830d-387bfd5bd156/693486c8-db97-4b7e-87f3-71673b4e8db4.jpeg",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/agentboogieai-max/Vigilant",
+        "type": "github"
+      },
+      {
+        "url": "https://suiscan.xyz/testnet/object/0x80350cfb8d75c2f78576c186af14f0ca3cc2890e2fb4ed22bce3a92a67cb8f84",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/waXiRfky6KI?si=JlvBzgPiUi_7DfGN",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x80350cfb8d75c2f78576c186af14f0ca3cc2890e2fb4ed22bce3a92a67cb8f84",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-09T07:05:16.385Z",
+    "updatedAt": "2026-02-09T07:05:16.385Z",
+    "isReported": false
+  },
+  {
+    "id": "4211f778-91e0-4b17-b92a-8f963e1181b4",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "5f5ae42b-818a-4e4e-8a43-8c76582b310f",
+    "projectName": "Stableflow Checkout",
+    "description": "<p>1. INTRODUCTION</p><p>Stableflow Checkout is a comprehensive Web3 payment solution on Sui. It solves the \"Payment Fragmentation\" problem where merchants want branded stablecoins (BrandUSD) while users hold generic USDC.</p><p>We leverage Sui's Programmable Transaction Blocks (PTBs) to enable \"Atomic Mint+Pay\": users pay with USDC, and the contract automatically collateralizes it to mint and transfer BrandUSD to the merchant in a single transaction. Additionally, a Local Agent allows users to automate these workflows via natural language.</p><p>2. KEY FEATURES</p><p>- Merchant Dashboard: Create on-chain products and issue Shared Object invoices.</p><p>- Atomic Mint+Pay: One-click payment where USDC -&gt; BrandUSD -&gt; Merchant happens atomically. No manual swaps needed.</p><p>- Redemption System: Merchants can burn BrandUSD to redeem underlying USDC liquidity 1:1 at any time.</p><p>- Intelligent Local Agent: A privacy-first Node.js agent that orchestrates on-chain tasks (e.g., \"Redeem all funds\") via natural language command, without holding private keys.</p><p>3. TECHNICAL HIGHLIGHTS</p><p>- Sui Move Architecture: Heavily uses PTBs for atomicity and Shared Objects for accessible commerce invoices.</p><p>- Local-First Privacy: The Agent runs locally (port 3777), ensuring private keys never leave the user's device.</p><p>- Modern Interactive UI: Built with React 19, Tailwind CSS v4, and HeroUI for a cyberpunk \"Vibe\" aesthetic.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/5f5ae42b-818a-4e4e-8a43-8c76582b310f/c3321d49-1d40-4eb3-864f-1398d3db980d.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5f5ae42b-818a-4e4e-8a43-8c76582b310f/1754562a-aafb-47f7-a741-0d72d75aa3f2.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5f5ae42b-818a-4e4e-8a43-8c76582b310f/b46a8958-24bc-4626-8a8b-a723a0497bc8.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5f5ae42b-818a-4e4e-8a43-8c76582b310f/c705221b-47bb-47ac-86f8-c0b4343df42a.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5f5ae42b-818a-4e4e-8a43-8c76582b310f/37841197-ef6b-4b0e-ba5c-267d1328d462.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/2658183739/vibecoding-vrm-sui",
+        "type": "github"
+      },
+      {
+        "url": "https://2658183739.github.io/vibecoding-vrm-sui/#/quickstart",
+        "type": "website"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=jdmkCqtGSJk",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": null,
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-09T06:52:37.770Z",
+    "updatedAt": "2026-02-09T06:52:37.770Z",
+    "isReported": false
+  },
+  {
+    "id": "81d81c24-0a5f-4ff9-8567-75991c85a321",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "279ad564-5e93-421a-b50b-7688a618f2f4",
+    "projectName": "ClawShield Lite",
+    "description": "<p>ClawShield Lite is a local-first safety layer for high-privilege AI agents that treats all external content as untrusted, detects prompt injection and social engineering patterns deterministically, and produces a machine-verifiable verdict <code>ALLOW</code>, <code>SANITIZE</code>, <code>BLOCK</code>) before action. Every scan emits a tamper-evident receipt; when enabled, the receipt is posted on Sui via a Move event for immutable auditability, with optional Walrus blob logging for extended forensics.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/279ad564-5e93-421a-b50b-7688a618f2f4/8f7b8c5d-bfb4-40b6-a53f-071dff3ae76d.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/279ad564-5e93-421a-b50b-7688a618f2f4/d31dad82-6603-4c5a-970a-7dddb9c85341.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/279ad564-5e93-421a-b50b-7688a618f2f4/b98f1e07-735c-4ab5-97a9-07c55e601969.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/DimitrisTheo-Dev/clawshield_lite",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/DimitrisTheo-Dev/clawshield_lite?tab=readme-ov-file#clawshield-lite",
+        "type": "website"
+      },
+      {
+        "url": "https://www.loom.com/share/e43815d663c44e67b7c1c0d775a913fe",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x53c0acb829e2f9cb9ababb323bf55e9992bf0b09cfce34238c0a5c3558842f1e",
+    "deployNetwork": "Devnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-08T17:16:02.372Z",
+    "updatedAt": "2026-02-08T17:22:54.246Z",
+    "isReported": false
+  },
+  {
+    "id": "a38e4a47-d503-4f1c-92b1-be6be46d5d01",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "3ced9573-0a91-4d4c-a018-6cc24dd39045",
+    "projectName": "Sentinel Protocol: Verifiable Agent Security Layer for OpenClaw on Sui",
+    "description": "<p>Sentinel is a verifiable pre-execution security layer purpose-built for the OpenClaw + Sui stack. Every action an OpenClaw agent</p><p>&nbsp; attempts is intercepted by Sentinel's policy gate, scored by a multi-signal risk engine (rule-based + behavioral + semantic), and \u2014</p><p>&nbsp; when blocked or approved \u2014 cryptographically anchored to the Sui blockchain as tamper-evident audit evidence.</p><p></p><p>&nbsp; Core capabilities:</p><p>&nbsp; - 4-decision policy engine: ALLOW / REQUIRE_APPROVAL / BLOCK / KILL_SWITCH</p><p>&nbsp; - One-time execution tokens with 30s TTL and replay prevention</p><p>&nbsp; - Human-in-the-loop approval workflow for wallet/high-risk operations</p><p>&nbsp; - Kill switch with manual arm + automatic consecutive-risk trigger</p><p>&nbsp; - Hash chain + Merkle root + Walrus CID + Sui on-chain anchor evidence chain</p><p>&nbsp; - Native OpenClaw plugin: 3 agent tools + bootstrap hook + CLI commands</p><p></p><p>&nbsp; Sui integration: 4 Move modules deployed on testnet \u2014 sentinel_audit (on-chain audit anchoring), sentinel_audit_integration (enhanced</p><p>&nbsp; queries), community_rules (decentralized rule governance), lazarus_protocol (dead man's switch vault).</p><p></p><p>&nbsp; OpenClaw integration: Plugin auto-injects security rules into every agent session via bootstrap hook; agents must call sentinel_gate</p><p>&nbsp; before any risky action (EXEC, WALLET, BROWSER, FS, NETWORK, CODE_EDITING).</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/3ced9573-0a91-4d4c-a018-6cc24dd39045/f7fe9754-f5d4-4046-8545-5a7be0d63da4.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/3ced9573-0a91-4d4c-a018-6cc24dd39045/a06019a1-900d-4f08-aa75-e150cba390ad.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/dongowu/sentinel-protocol",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/dongowu/sentinel-protocol",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/tpqgaW6TXyI",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x9ab7b272a0e6c959835ff29e3fdf050dc4c432f6794b8aa54533fefcad985eca",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-08T15:39:11.905Z",
+    "updatedAt": "2026-02-24T09:58:33.067Z",
+    "isReported": false
+  },
+  {
+    "id": "878b5ef5-9fb0-4884-aa58-f448986bd28a",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "07fe2330-418d-4dea-aad4-d03ed1922757",
+    "projectName": "Agents",
+    "description": "<p>The First Community-Powered Skill Firewall for OpenClaw.<br><br>Agents are vulnerable. Installing a new Skill is a leap of faith.</p><p>Aegis changes that. It is a decentralized security protocol built on Sui that enables agents to share threat intelligence instantly.</p><p>1. Local Guard: Scans your agent's workspace for known malicious patterns before execution.</p><p>2. Sui Consensus: When a threat is detected, its signature is immutable recorded on the Sui blockchain.</p><p>3. Global Immunity: Once a threat is flagged by one agent, every other Aegis-protected agent becomes instantly immune.</p><p>Tech: TypeScript, Move, Zero-Gas Verification.</p><p>Tagline: One Infected, All Immunized.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/07fe2330-418d-4dea-aad4-d03ed1922757/d05a549d-3a99-4c82-b4ae-a70a9e9d4509.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/07fe2330-418d-4dea-aad4-d03ed1922757/ee9a1f93-b1b6-4497-9e3a-da63740fa876.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/nerv00kaworu/aegis-protocol",
+        "type": "github"
+      },
+      {
+        "url": "https://github.com/nerv00kaworu/aegis-protocol",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/X61fbfZe-XI",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x00eaeb964c2acd0dbf26264cbd13c2008def9b55957b3cdf7e8907492d7b3ab3",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-08T14:58:37.165Z",
+    "updatedAt": "2026-02-08T14:58:37.165Z",
+    "isReported": false
+  },
+  {
+    "id": "9e28c225-9a0c-4001-b210-1b014ad2f299",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "5b2c3ee9-8d11-4b40-8fa5-2597010892b7",
+    "projectName": "SealForge \u2014 Autonomous AI Agent That Creates, Encrypts, and Sells Premium Intelligence On-Chain",
+    "description": "<p>SealForge is an autonomous intelligence marketplace where an AI agent earns revenue by creating and selling encrypted research reports on the Sui blockchain.</p><p>The agent runs a continuous 6-phase loop: it scans live market data from DefiLlama, CoinGecko, and RSS feeds, identifies the highest-confidence tradeable signal, performs deep-dive web research, builds a chain-of-thought reasoning analysis with increasing confidence scores, encrypts the full intelligence payload using Seal threshold encryption (2-of-2 key servers), uploads the encrypted blob to Walrus decentralized storage, and publishes a listing to the on-chain Sui Move marketplace \u2014 all without human intervention.</p><p>Buyers browse the marketplace, pay SUI to purchase access, and decrypt the content directly in their browser. Seal key servers verify on-chain that the caller is a paying buyer before releasing decryption keys. No centralized authority can grant or revoke access. The decrypted experience includes an interactive intelligence viewer with animated reasoning chains, confidence indicators, actionable trading plays with links to real DeFi protocols, source attribution, and personal notes.</p><p>The agent has autonomously created 10 intelligence packages, completed 9 sales, and earned 2.6+ SUI in revenue on Sui Testnet \u2014 proving the full create \u2192 encrypt \u2192 store \u2192 sell \u2192 decrypt pipeline works end-to-end.</p><p><strong>Tech stack:</strong> Sui Move smart contracts, Seal threshold encryption, Walrus decentralized storage, React + Vite frontend, Claude 4.5 Sonnet + DeepSeek R1 via Replicate, @mysten/dapp-kit for wallet integration.</p><p><strong>Contract addresses (Sui Testnet):</strong></p><ul><li><p>Package: <code>0x69ba4d42032299994c9c97a927773f23b36ba4f908a50d8b4be7b440ad9dfbcf</code></p></li><li><p>Marketplace: <code>0xcb6adca892ca552d5efb5652fddc1adcd44e1b9bdc51db89a45968d42e6ff59d</code></p></li><li><p>Treasury: <code>0x62337a9c38d31aa62552158865b90beafd739c7ff171e0d83bae05d2d24c510a</code></p></li></ul><p><strong>Live demo:</strong> <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-blue-400 underline cursor-pointer\" href=\"https://frontend-zeta-one-75.vercel.app\">https://frontend-zeta-one-75.vercel.app</a></p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/5b2c3ee9-8d11-4b40-8fa5-2597010892b7/50e54773-bf76-471b-8915-5fb554a757b1.jpeg",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": [
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5b2c3ee9-8d11-4b40-8fa5-2597010892b7/85aed63c-e78a-4946-b924-7a7a25bfb8d4.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5b2c3ee9-8d11-4b40-8fa5-2597010892b7/406ee47f-70fb-40cf-840e-c323041115b5.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5b2c3ee9-8d11-4b40-8fa5-2597010892b7/27a6453e-e5be-4414-93a4-52e25b3e43d5.png",
+      "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/media/5b2c3ee9-8d11-4b40-8fa5-2597010892b7/2f25df13-5d43-478e-8844-66b4a60ed4af.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/sbbd755/sealforge.git",
+        "type": "github"
+      },
+      {
+        "url": "https://frontend-zeta-one-75.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://cap.so/s/2xqqphwxmn9fvy6",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x69ba4d42032299994c9c97a927773f23b36ba4f908a50d8b4be7b440ad9dfbcf",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-07T15:40:20.567Z",
+    "updatedAt": "2026-03-01T08:42:09.710Z",
+    "isReported": false
+  },
+  {
+    "id": "4bd6cfba-43f0-4c6e-98c6-22fcf28ec7e2",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "f994f4dd-81cd-47e2-bbb6-abdf9503cd0a",
+    "projectName": "ClawShield",
+    "description": "<p>ClawShield is a security layer for local AI agents (OpenClaw-style).</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/f994f4dd-81cd-47e2-bbb6-abdf9503cd0a/fd0719c6-9441-4315-aa9a-2ee387a9574c.jpg",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/naderamin/clawshield",
+        "type": "github"
+      },
+      {
+        "url": "https://www.moltbook.com/post/f4c50fcb-10e7-4120-95a2-406014cba2ef",
+        "type": "website"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=t7tD5rOrNR4",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": "Mainnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-07T11:25:50.337Z",
+    "updatedAt": "2026-02-07T11:25:50.337Z",
+    "isReported": false
+  },
+  {
+    "id": "d3bf212b-2fe5-4053-8e93-97cb7dd2fb25",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "7d3a0109-f392-471d-883b-d5c27c5256c7",
+    "projectName": "Sui-Butler",
+    "description": "<p>Sui-Butler is a decentralized, autonomous AI assistant framework built on Sui. It enables AI agents (OpenClaw) to manage their own operational budgets securely through on-chain Budget Objects and Agent Capabilities. By leveraging Sui's object-centric model, Sui-Butler provides a transparent, verifiable, and programmable economy for agents, allowing them to autonomously pay for their own resources (APIs, compute, etc.) while keeping the human owner in control.</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/7d3a0109-f392-471d-883b-d5c27c5256c7/48c80174-69aa-4e64-bf28-076510eb78fa.png",
+    "track": "Local God Mode",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/kordotsui/sui-butler",
+        "type": "github"
+      },
+      {
+        "url": "https://sui-butler.ai",
+        "type": "website"
+      },
+      {
+        "url": "https://youtube.com/watch?v=sui-butler-demo",
+        "type": "youtube"
+      }
+    ],
+    "packageId": "0x5f1d297a11647415180f555671aea78cee6bf2280263412d77ad6f4521f4c628",
+    "deployNetwork": "Testnet",
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-07T06:38:31.029Z",
+    "updatedAt": "2026-02-07T06:52:15.480Z",
+    "isReported": false
+  },
+  {
+    "id": "42de72f3-0605-46d7-870f-18f7630221c9",
+    "hackathonId": "cd96178d-5e11-4d56-9f02-1bf157de2552",
+    "createdBy": "036320a8-70f2-4a65-9277-666d584e19e4",
+    "projectName": "Klaave (Secure Agent Credit Rails + Walrus Audit Trail)",
+    "description": "<p>Klaave is secure, agent-native credit rails: USDC lenders deposit into an on-chain pool; agents borrow against a bond with fee-yield back to lenders. For the Sui x OpenClaw hackathon we focus on Safety &amp; Security: every agent action produces an auditable intent bundle (prompt \u2192 policy checks \u2192 simulation \u2192 tx proposal) that can be anchored to Walrus for tamper-evident history.</p><p></p><p></p><p>Why it matters: autonomous agents need capital, but humans need guarantees. Klaave adds hard limits (bond-backed borrowing, slashing/liquidation, strict role separation) and an audit trail that makes it possible to trust agents with money.</p><p></p><p>Sui Stack integration (Walrus): store a hash-linked record of each credit action and the agent\u2019s proof artifacts (sanitized prompts, risk checks, tx params) so reviewers can verify what happened.</p><p></p><p>Deployed + demo: Base Sepolia contracts + a human-readable frontend (Vercel).</p>",
+    "projectLogoUrl": "https://zaelbllclkxjgibdswrj.supabase.co/storage/v1/object/public/projects/036320a8-70f2-4a65-9277-666d584e19e4/4f5dd887-bcca-4c0a-a89e-1bb267a4e0a4.png",
+    "track": "Safety & Security",
+    "bounties": null,
+    "mediaFileUrls": null,
+    "links": [
+      {
+        "url": "https://github.com/R3DRVM/claave-acl",
+        "type": "github"
+      },
+      {
+        "url": "https://claave-acl.vercel.app/",
+        "type": "website"
+      },
+      {
+        "url": "https://youtu.be/iS37hnw-YRo",
+        "type": "youtube"
+      }
+    ],
+    "packageId": null,
+    "deployNetwork": null,
+    "status": "submitted",
+    "listOnProjectPage": true,
+    "likeCount": 0,
+    "reportCount": 0,
+    "createdAt": "2026-02-07T02:20:03.898Z",
+    "updatedAt": "2026-02-07T02:20:03.898Z",
+    "isReported": false
+  }
+]
