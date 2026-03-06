@@ -88,7 +88,10 @@ Scoring: 4 criteria × 10 points each = 40 max (Technical Merit, Creativity, Pro
 ### What's Next
 
 - **Phase 2: Cross-Track Voting** — Shortlisted projects vote across tracks (Track 1 shortlist votes on Track 2, and vice versa) to determine the **Top 5 winners per track** ($1,900 each).
+  - "Local God Mode" Shortlisted Teams vote here: https://www.deepsurge.xyz/community/e110de57-95ef-44de-a962-a2f3686cba53
+  - "Safety & Security" Shortlisted Teams vote here: https://www.deepsurge.xyz/community/89259de7-f2bc-40df-8f7c-e2dd4129cdfd
 - **Phase 3: Community Favourite** — All projects (excluding the 10 track winners) vote to determine **5 Community Favourite winners** ($200 each).
+  - All Teams Vote here: https://www.deepsurge.xyz/community/c32c77e9-bf67-48cb-8f3f-b3dce4eaf5c3
 
 ---
 
