@@ -1,0 +1,11 @@
+I am: L16 Votes: S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25, S26, S27, S28, S29, S30, L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12, L13, L14, L15, L17, L18, L19, L20, L21, L22, L23, L24, L25
+I am: L13 Votes: S19, S20, S24, S15, S3, S22, S16, S5, S6, S17, L25, L21, L4, L7, L6, L10, L8, L19, L16
+I am: S1 Votes: S3, S4, S5, S6, S7, L4, L7, L6, L10
+I am: S21 Votes: S30
+I am: L23 Votes: L10
+I am: L8 Votes: L13, L16
+I am: S4 Votes: S1,S24,S25,S18,L19,L16,L25
+I am: S24 Votes: L4, L10, L19, L7,S4
+I am: L19 Votes: S20,S24,S15,S17,L6,L16,L21,L25
+I am: L25 Votes: L16, L19, S17
+I am: S6 Votes: S13, S20, L12, L8

@@ -1,0 +1,8 @@
+[package]
+name = "draw"
+edition = "2024"
+
+[dependencies]
+
+[addresses]
+draw = "0x0"
