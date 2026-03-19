@@ -57,6 +57,10 @@ Voted on by 7 Track 1 (Safety & Security) shortlisted teams.
 | T1-10                      | x    | x    |      |      | x    | x    |      |      |      |       | x     | 5              |
 | Votes Received             | 7    | 7    |      |      | 6    | 7    | 4    | 5    | 5    | 4     | 7     |                |
 
+### Original DeepSurge Posts
+- Track 1 voting for Track 2: https://www.deepsurge.xyz/community/89259de7-f2bc-40df-8f7c-e2dd4129cdfd
+- Track 2 voting for Track 1: https://www.deepsurge.xyz/community/e110de57-95ef-44de-a962-a2f3686cba53
+
 ### Non-voters
 
 The following shortlisted teams did not submit a vote:
@@ -113,6 +117,8 @@ All 55 teams were eligible to vote. Each team could approve as many projects as 
 | 16 | S18 proof-of-restraint     | 1     |
 | 17 | S13 Injection Hunter       | 1     |
 | 18 | L12 PixelPal               | 1     |
+
+Original DeepSurge Post: https://www.deepsurge.xyz/community/c32c77e9-bf67-48cb-8f3f-b3dce4eaf5c3
 
 ---
 
