@@ -70,7 +70,7 @@ The following shortlisted teams did not submit a vote:
 
 All 55 teams were eligible to vote. Each team could approve as many projects as they wanted from either track. After votes were tallied, the 10 Phase 2 track winners above were excluded from the results. The top 5 remaining projects by total approvals win.
 
-11 teams submitted ballots. 1 ballot (L16) was resolved via on-chain random draw (see below).
+11 teams submitted ballots. 1 ballot (L16) was resolved via on-chain random draw (see below). The updated rules stated to submit no more than 5 approvals but some teams submitted more than 5. We believe this is still within the spirit of this hackathon so we will accept all votes as long as they are not approving all other projects.
 
 | Rank | Project                | Votes | GitHub                                                                                       |
 |:----:|------------------------|:-----:|----------------------------------------------------------------------------------------------|
